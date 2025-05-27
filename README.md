@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository hosts my solutions to the **100 Days of RTL** challenge, a hands-on and highly practical course curated by Rahul Behl on QuickSilicon. The challenge consists of a structured series of daily exercises covering RTL design principles, coding techniques, and verification methodologies, ranging from basic modules like multiplexers to advanced topics such as formal verification and UVM-based testbenches. ([github.com](https://github.com/raulbehl/100DaysOfRTL), [quicksilicon.in](https://quicksilicon.in/?utm_source=chatgpt.com))
+This repository hosts my solutions to the **100 Days of RTL** challenge, a hands-on and highly practical course curated by Rahul Behl on QuickSilicon. The challenge consists of a structured series of daily exercises covering RTL design principles, coding techniques, and verification methodologies, ranging from basic modules like multiplexers to advanced topics such as formal verification and UVM-based testbenches. ([github.com](https://github.com/raulbehl/100DaysOfRTL), [quicksilicon.in](https://quicksilicon.in/))
 
 ## Challenge Overview
 
@@ -22,12 +22,12 @@ This repository hosts my solutions to the **100 Days of RTL** challenge, a hands
 │   ├── day1.sv       # RTL implementation
 │   └── day1_tb.sv    # Testbench
 ├── day02 - dff/
-│   ├── day02_dff.sv
-│   └── day02_dff_tb.sv
+│   ├── day2.sv
+│   └── day2.sv
 ...
 └── day100 - /
-    ├── day100_module.sv
-    └── day100_module_tb.sv
+    ├── day100.sv
+    └── day100_tb.sv
 ```
 
 ## Requirements
