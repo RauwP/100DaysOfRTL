@@ -37,5 +37,5 @@ This repository hosts my solutions to the **100 Days of RTL** challenge, a hands
 
 ## Author
 
-**Gad**, Electrical Engineering Student
+**Gad B**, Electrical Engineering Student
 Email: \[[rauwp@duck.com](mailto:rauwp@duck.com)]
