@@ -2,11 +2,10 @@
 
 ## Introduction
 
-This repository hosts my solutions to the **100 Days of RTL** challenge, a hands-on and highly practical course curated by Rahul Behl on QuickSilicon. The challenge consists of a structured series of daily exercises covering RTL design principles, coding techniques, and verification methodologies, ranging from basic modules like multiplexers to advanced topics such as formal verification and UVM-based testbenches. ([github.com](https://github.com/raulbehl/100DaysOfRTL), [quicksilicon.in](https://quicksilicon.in/))
+This repository hosts my solutions to the **#100DaysofRTL** challenge, a hands-on and highly practical course curated by Rahul Behl on QuickSilicon. The challenge consists of a structured series of daily exercises covering RTL design principles, coding techniques, and verification methodologies, ranging from basic modules like multiplexers to advanced topics such as formal verification and UVM-based testbenches. ([github.com](https://github.com/raulbehl/100DaysOfRTL), [quicksilicon.in](https://quicksilicon.in/))
 
 ## Challenge Overview
 
-* **Duration**: 100 days of exercises.
 * **Content Areas**:
 
   * **RTL Design**: Fundamental to advanced Verilog/SystemVerilog constructs.
