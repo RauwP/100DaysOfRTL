@@ -21,18 +21,18 @@ This repository contains my daily SystemVerilog solutions to the **100 Days of R
 Each exercise is organized under `dayXX_<short_description>`:
 
 ```
-├── day01_mux/
-│   ├── day01_mux.sv       # RTL module
-│   ├── day01_mux_tb.sv    # Testbench
+├── day1 - mux/
+│   ├── day1.sv       # RTL module
+│   ├── day1.sv    # Testbench
 │   └── Makefile           # Build & simulate script
-├── day02_dff_reset/
-│   ├── day02_dff.sv
-│   ├── day02_dff_tb.sv
+├── day2 - DFF/
+│   ├── day2.sv
+│   ├── day2_tb.sv
 │   └── Makefile
 ...
-└── day100_final/
-    ├── day100_final.sv
-    ├── day100_final_tb.sv
+└── day100 - /
+    ├── day100.sv
+    ├── day100_tb.sv
     └── Makefile
 ```
 
@@ -49,7 +49,7 @@ Each directory includes a `Makefile` that compiles, runs the simulation, and aut
 2. **Inspect Output & Waveform**
 
    * The Makefile echoes pass/fail results based on built-in checks in the testbench.
-   * After simulation, GTKWave will open `day01_mux.vcd` (or your chosen viewer if configured in the Makefile).
+   * After simulation, GTKWave will open `day1.vcd` (or your chosen viewer if configured in the Makefile).
 
 ## Requirements
 
