@@ -63,12 +63,12 @@ Each directory includes a `Makefile` that compiles, runs the simulation, and aut
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/RauwP/100DaysOfRTL-Solutions.git
+   git clone https://github.com/RauwP/100DaysOfRTL.git
    ```
 2. Enter a problem directory and run `make`:
 
    ```bash
-   cd 100DaysOfRTL-Solutions/day03_fsm_mealy
+   cd 100DaysOfRTL-Solutions/day3 - rising falling edge
    make
    ```
 3. Review console output for pass/fail status.
