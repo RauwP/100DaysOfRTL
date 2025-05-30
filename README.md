@@ -2,39 +2,78 @@
 
 ## Introduction
 
-This repository hosts my solutions to the **#100DaysofRTL** challenge, a hands-on and highly practical course curated by Rahul Behl on QuickSilicon. The challenge consists of a structured series of daily exercises covering RTL design principles, coding techniques, and verification methodologies, ranging from basic modules like multiplexers to advanced topics such as formal verification and UVM-based testbenches. ([github.com](https://github.com/raulbehl/100DaysOfRTL), [quicksilicon.in](https://quicksilicon.in/))
+This repository contains my daily SystemVerilog solutions to the **100 Days of RTL** challenge by Rahul Behl (QuickSilicon). The course provides 100 hands-on exercises designed to reinforce RTL design fundamentals through code writing and Makefile-driven simulation.
 
 ## Challenge Overview
 
-* **Content Areas**:
+* **Total Exercises**: 100 daily problems.
+* **Topics Covered**:
 
-  * **RTL Design**: Fundamental to advanced Verilog/SystemVerilog constructs.
-  * **Testbench Development**: Introduction to SystemVerilog testbenches, randomization, interfaces, and advanced verification features.
-  * **Formal Verification**: Equivalence checking and property-based proofs.
-  * **UVM Methodology**: Building UVM drivers, sequencers, and testbenches.
-  * **Advanced Topics**: Covering various EDA tools and methodologies.
+  * **Combinational Logic**: Multiplexers, encoders, decoders, comparators
+  * **Sequential Elements**: D flip-flops (sync/async reset), shift registers, counters
+  * **Finite State Machines**: Moore and Mealy implementations
+  * **Arithmetic Units**: Adders, subtractors, multipliers
+  * **Clocking & Synchronization**: Single- and multi-clock domains, gray counters
+  * **Testbench Basics**: Procedural stimulus, basic assertions, Makefile automation
 
 ## Repository Structure
 
+Each exercise is organized under `dayXX_<short_description>`:
+
 ```
-├── day1 - mux/
-│   ├── day1.sv       # RTL implementation
-│   └── day1_tb.sv    # Testbench
-├── day02 - dff/
-│   ├── day2.sv
-│   └── day2.sv
+├── day01_mux/
+│   ├── day01_mux.sv       # RTL module
+│   ├── day01_mux_tb.sv    # Testbench
+│   └── Makefile           # Build & simulate script
+├── day02_dff_reset/
+│   ├── day02_dff.sv
+│   ├── day02_dff_tb.sv
+│   └── Makefile
 ...
-└── day100 - /
-    ├── day100.sv
-    └── day100_tb.sv
+└── day100_final/
+    ├── day100_final.sv
+    ├── day100_final_tb.sv
+    └── Makefile
 ```
+
+## Building & Simulation
+
+Each directory includes a `Makefile` that compiles, runs the simulation, and automatically launches the waveform viewer (GTKWave by default).
+
+1. **Run Makefile**
+
+   ```bash
+   cd day01_mux
+   make
+   ```
+2. **Inspect Output & Waveform**
+
+   * The Makefile echoes pass/fail results based on built-in checks in the testbench.
+   * After simulation, GTKWave will open `day01_mux.vcd` (or your chosen viewer if configured in the Makefile).
 
 ## Requirements
 
-* **Toolchain**:
-  * Modelsim/quicksilicon – for RTL simulation.
+* **Simulator**: Icarus Verilog (`iverilog` & `vvp`) or ModelSim/Questa
+* **Make**: GNU Make
+* **Waveform Viewer** (optional): GTKWave
+* **Environment**: Linux, macOS, or Windows (WSL/Cygwin)
+
+## Usage
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/<username>/100DaysOfRTL-Solutions.git
+   ```
+2. Enter a problem directory and run `make`:
+
+   ```bash
+   cd 100DaysOfRTL-Solutions/day03_fsm_mealy
+   make
+   ```
+3. Review console output for pass/fail status.
 
 ## Author
 
 **Gad B**, Electrical Engineering Student
-Email: \[[rauwp@duck.com](mailto:rauwp@duck.com)]
+Email: [rauwp@duck.com](mailto:rauwp@duck.com)
