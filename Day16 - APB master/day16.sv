@@ -19,43 +19,40 @@ module day16 (
   input       wire        pready_i,
   input       wire[31:0]  prdata_i
 );
-  // Enum for the APB state
-  typedef enum logic[1:0] {ST_IDLE = 2'b00, ST_SETUP = 2'b01, ST_ACCESS = 2'b10} apb_state_t;
 
-  apb_state_t nxt_state;
-  apb_state_t state_q;
-
-  logic[31:0] rdata_q;
-
-  always_ff @(posedge clk or posedge reset)
-    if (reset)
-      state_q <= ST_IDLE;
-    else
-      state_q <= nxt_state;
-
+  typedef enum logic [1:0] { IDLE = 2'd0,
+                           SETUP  = 2'd1,
+                           ACCESS = 2'd2 } apb_state_t;
+  apb_state_t curr_state, nxt_state;
+  
+  logic [31:0] rdata_ff;
+  
+  always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+      curr_state <= IDLE;
+      rdata_ff <= 32'h0;
+    end
+  	else begin
+      curr_state <= nxt_state;
+      if (curr_state == ACCESS && pready_i && cmd_i == 2'b01)
+        rdata_ff <= prdata_i;
+    end
+  end
+  
   always_comb begin
-    nxt_state = state_q;
-    case (state_q)
-      ST_IDLE   : if (|cmd_i) nxt_state = ST_SETUP; else nxt_state = ST_IDLE;
-      ST_SETUP  : nxt_state = ST_ACCESS;
-      ST_ACCESS : begin
-        if (pready_i) nxt_state = ST_IDLE;
-      end
-      default   : nxt_state = state_q;
+    nxt_state = curr_state;
+    case (curr_state)
+      IDLE: if (|cmd_i) nxt_state = SETUP; else nxt_state = IDLE;
+      SETUP: nxt_state = ACCESS;
+      ACCESS: if (pready_i) nxt_state = IDLE;
+      default: nxt_state = curr_state;
     endcase
   end
-
-  assign psel_o     = (state_q == ST_SETUP) | (state_q == ST_ACCESS);
-  assign penable_o  = (state_q == ST_ACCESS);
-  assign pwrite_o   = cmd_i[1];
-  assign paddr_o    = 32'hDEAD_CAFE;
-  assign pwdata_o   = rdata_q + 32'h1;
-
-  // Capture the read data to store it for the next write
-  always_ff @(posedge clk or posedge reset)
-    if (reset)
-      rdata_q <= 32'h0;
-    else if (penable_o && pready_i)
-      rdata_q <= prdata_i;
+  
+  assign psel_o = (curr_state == SETUP) | (curr_state == ACCESS);
+  assign penable_o = (curr_state == ACCESS);
+  assign pwrite_o = cmd_i[1];
+  assign paddr_o = 32'hDEAD_CAFE;
+  assign pwdata_o = rdata_ff + 32'h1;
 
 endmodule
