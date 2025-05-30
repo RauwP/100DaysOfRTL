@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module day12_tb ();
 
   logic         clk;
@@ -17,6 +18,8 @@ module day12_tb ();
   logic [11:0] wanted_seq = 12'b1110_1101_1011;
   
   initial begin
+    $dumpfile("day12.vcd");
+    $dumpvars(0, day12_tb);
     reset<= 1'b1;
     x_i <= 1'b1;
     @(posedge clk);
@@ -30,6 +33,7 @@ module day12_tb ();
       x_i <= $random%2;
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 

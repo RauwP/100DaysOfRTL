@@ -1,5 +1,5 @@
 // TB for round robin
-
+`timescale 1ns/1ps
 module day15_tb ();
 
   logic clk;
@@ -18,6 +18,8 @@ module day15_tb ();
   end
   
   initial begin
+    $dumpfile("day15.vcd");
+    $dumpvars(0, day15_tb);
     reset <= 1'b1;
     req_i <= 4'h0;
     @(posedge clk);
@@ -28,6 +30,7 @@ module day15_tb ();
       req_i <= $urandom_range(0, 4'hF);
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 

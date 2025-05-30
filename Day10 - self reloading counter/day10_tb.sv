@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module day10_tb ();
   
   logic          clk;
@@ -17,6 +18,8 @@ module day10_tb ();
   
   int cycle;
   initial begin
+    $dumpfile("day10.vcd");
+    $dumpvars(0, day10_tb);
     reset <= 1'b1;
     load_i <= 1'b0;
     load_val_i <= 4'h0;
@@ -33,6 +36,7 @@ module day10_tb ();
         @(posedge clk);
       end
     end
+	#1;
     $finish();
   end
 endmodule

@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module day11_tb ();
 
   logic clk;
@@ -16,6 +17,8 @@ module day11_tb ();
   end
   
   initial begin
+    $dumpfile("day11.vcd");
+    $dumpvars(0, day11_tb);
     reset <= 1'b1;
     parallel_i <= 4'h0;
     @(negedge clk);
@@ -25,6 +28,7 @@ module day11_tb ();
       parallel_i <= $urandom_range(0, 4'hF);
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 

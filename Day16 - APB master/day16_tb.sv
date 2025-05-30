@@ -1,5 +1,5 @@
 // APB Master TB
-
+`timescale 1ns/1ps
 module day16_tb ();
 
   logic clk, reset, psel_o, penable_o, pwrite_o, pready_i;
@@ -29,6 +29,8 @@ module day16_tb ();
   end
   
   initial begin
+    $dumpfile("day16.vcd");
+    $dumpvars(0, day16_tb);
     reset <= 1'b1;
     cmd_i <= 2'b00;
     prdata_i <= 32'h0;
@@ -42,6 +44,7 @@ module day16_tb ();
       while (~pready_i | ~psel_o) @(posedge clk);
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 

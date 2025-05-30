@@ -1,5 +1,5 @@
 // Simple TB
-
+`timescale 1ns/1ps
 module day5_tb ();
 
   logic clk;
@@ -15,6 +15,8 @@ module day5_tb ();
   end
   
   initial begin
+    $dumpfile("day5.vcd");
+    $dumpvars(0, day5_tb);
     reset <= 1'b1;
     @(posedge clk)
     @(posedge clk)
@@ -22,6 +24,7 @@ module day5_tb ();
     for(int i=0;i<128;i++)begin
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 endmodule

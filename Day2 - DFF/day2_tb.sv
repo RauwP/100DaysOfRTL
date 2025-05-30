@@ -1,5 +1,5 @@
 // DFF TB
-
+`timescale 1ns/1ps
 module day2_tb ();
 	logic clk;
   logic reset;
@@ -17,6 +17,8 @@ module day2_tb ();
   end
     
   initial begin
+    $dumpfile("day2.vcd");
+    $dumpvars(0, day2_tb);
     reset <= 1'b1;
     d_i <= 1'b0;
     @(posedge clk)
@@ -32,6 +34,7 @@ module day2_tb ();
     reset <= 1'b0;
     @(posedge clk)
     @(posedge clk)
+	#1;
     $finish();
   end
 

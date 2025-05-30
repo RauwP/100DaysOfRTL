@@ -1,5 +1,5 @@
 // Memry TB
-
+`timescale 1ns/1ps
 module day17_tb ();
 
   logic        clk;
@@ -26,8 +26,11 @@ module day17_tb ();
 
   // Generate stimulus
   initial begin
+    $dumpfile("day17.vcd");
+    $dumpvars(0, day17_tb);
     reset <= 1'b1;
     req_i <= 1'b0;
+	req_addr_i  <= $urandom_range(0, 1023);
     @(posedge clk);
     reset <= 1'b0;
     @(posedge clk);
@@ -58,6 +61,7 @@ module day17_tb ();
       req_i <= 1'b0;
       @(posedge clk);
     end
+	#1;
     $finish();
   end
   

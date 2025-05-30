@@ -1,5 +1,5 @@
+`timescale 1ns/1ps
 module day6_tb ();
-
   logic clk;
   logic reset;
   logic x_i;
@@ -15,6 +15,8 @@ module day6_tb ();
   end
   
   initial begin
+    $dumpfile("day6.vcd");
+    $dumpvars(0, day6_tb);
     reset <= 1'b1;
     x_i <= 1'b0;
     @(posedge clk)
@@ -24,6 +26,7 @@ module day6_tb ();
       x_i <= $random%2;
       @(posedge clk);
     end
+	#1;
     $finish();
   end
 endmodule
