@@ -63,7 +63,7 @@ Each directory includes a `Makefile` that compiles, runs the simulation, and aut
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<username>/100DaysOfRTL-Solutions.git
+   git clone https://github.com/RauwP/100DaysOfRTL-Solutions.git
    ```
 2. Enter a problem directory and run `make`:
 
