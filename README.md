@@ -22,8 +22,8 @@ Each exercise is organized under `dayXX_<short_description>`:
 
 ```
 ├── day1 - mux/
-│   ├── day1.sv       # RTL module
-│   ├── day1.sv    # Testbench
+│   ├── day1.sv            # RTL module
+│   ├── day1.sv            # Testbench
 │   └── Makefile           # Build & simulate script
 ├── day2 - DFF/
 │   ├── day2.sv
