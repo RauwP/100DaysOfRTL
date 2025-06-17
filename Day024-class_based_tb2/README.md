@@ -18,6 +18,7 @@ You will need to generate APB transactions from within a SystemVerilog `class`. 
     * From your top-level module, you need to start the transaction generation task that you defined within your class.
 
 ### Testbench Structure
+```sketch
 +-------------------------------------------------+
 |              day24_tb (Top Module)              |
 |                                                 |
