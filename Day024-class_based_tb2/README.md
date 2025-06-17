@@ -39,6 +39,9 @@ You will need to generate APB transactions from within a SystemVerilog `class`. 
 |                +-------------+                  |
 |                                                 |
 +-------------------------------------------------+
+
+
+
 Use the following structure as a starting point for your solution. You will need to fill in the missing logic.
 
 ```systemverilog
