@@ -21,10 +21,17 @@ The goal for this challenge is to design a parameterized SystemVerilog `class` t
 A testbench instantiating the class with `N=8` should produce the following sequence of patterns on the first 8 calls to `randomize()`:
 
 10000000
+
 11000000
+
 11100000
+
 11110000
+
 11111000
+
 11111100
+
 11111110
+
 11111111
