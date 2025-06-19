@@ -34,9 +34,9 @@ module day27_tb();
 		
 		for(int i = 0; i < 512 ; i++) begin
 			@(posedge clk);
-			push_data_i <= $urandom_range(0, 15);
-			pop = $urandom_range(0,5);
-			push = $urandom_range(0,10);
+			push_data_i <= $urandom_range(0, (2**DATA_W)-1);
+			pop = $urandom_range(0,5) % 2;
+			push = $urandom_range(0,10) % 2;
 			
 			if(queue.size() == DEPTH) push = 0;
 			if(queue.size() == 0) pop = 0;
