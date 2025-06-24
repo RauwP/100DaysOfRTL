@@ -37,7 +37,7 @@ The early exercises are self-contained and can be run locally using open-source 
 * **Process**: Each directory contains a `Makefile` that automates compiling the RTL and testbench, running the simulation, and generating a `.vcd` waveform file.
 
     ```bash
-    cd Day01-Mux
+    cd Day001-Mux
     make
     ```
 
@@ -60,116 +60,116 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 │   └── Makefile         # Build & simulate script
 
 # Example for Days 23-31
-├── Day032-Clocking_Blocks/
-│   ├── day32.sv         # SystemVerilog code (DUT, TB, etc.)
+├── Day031-Function_v_Task/
+│   ├── day31.sv         # SystemVerilog code (DUT, TB, etc.)
 │   └── README.md        # Description and link to EDA Playground
 ...
 ```
 
 ## Project Quick Links
 
-| Day | EDA Playground Link |
-|:---:|:-------------------:|
-| 1   | [Link]()            |
-| 2   | [Link]()            |
-| 3   | [Link]()            |
-| 4   | [Link]()            |
-| 5   | [Link]()            |
-| 6   | [Link]()            |
-| 7   | [Link]()            |
-| 8   | [Link]()            |
-| 9   | [Link]()            |
-| 10  | [Link]()            |
-| 11  | [Link]()            |
-| 12  | [Link]()            |
-| 13  | [Link]()            |
-| 14  | [Link]()            |
-| 15  | [Link]()            |
-| 16  | [Link]()            |
-| 17  | [Link]()            |
-| 18  | [Link]()            |
-| 19  | [Link]()            |
-| 20  | [Link]()            |
-| 21  | [Link]()            |
-| 22  | [Link]()            |
-| 23  | [Link]()            |
-| 24  | [Link]()            |
-| 25  | [Link](https://www.edaplayground.com/x/rfSb)            |
-| 26  | [Link](https://www.edaplayground.com/x/SrRh)            |
-| 27  | [Link](https://www.edaplayground.com/x/uQX6)            |
-| 28  | [Link](https://www.edaplayground.com/x/YTid)            |
-| 29  | [Link](https://www.edaplayground.com/x/qhiJ)            |
-| 30  | [Link](https://www.edaplayground.com/x/Yxus)            |
-| 31  | [Link](https://www.edaplayground.com/x/8m2N)            |
-| 32  | [Link]()            |
-| 33  | [Link]()            |
-| 34  | [Link]()            |
-| 35  | [Link]()            |
-| 36  | [Link]()            |
-| 37  | [Link]()            |
-| 38  | [Link]()            |
-| 39  | [Link]()            |
-| 40  | [Link]()            |
-| 41  | [Link]()            |
-| 42  | [Link]()            |
-| 43  | [Link]()            |
-| 44  | [Link]()            |
-| 45  | [Link]()            |
-| 46  | [Link]()            |
-| 47  | [Link]()            |
-| 48  | [Link]()            |
-| 49  | [Link]()            |
-| 50  | [Link]()            |
-| 51  | [Link]()            |
-| 52  | [Link]()            |
-| 53  | [Link]()            |
-| 54  | [Link]()            |
-| 55  | [Link]()            |
-| 56  | [Link]()            |
-| 57  | [Link]()            |
-| 58  | [Link]()            |
-| 59  | [Link]()            |
-| 60  | [Link]()            |
-| 61  | [Link]()            |
-| 62  | [Link]()            |
-| 63  | [Link]()            |
-| 64  | [Link]()            |
-| 65  | [Link]()            |
-| 66  | [Link]()            |
-| 67  | [Link]()            |
-| 68  | [Link]()            |
-| 69  | [Link]()            |
-| 70  | [Link]()            |
-| 71  | [Link]()            |
-| 72  | [Link]()            |
-| 73  | [Link]()            |
-| 74  | [Link]()            |
-| 75  | [Link]()            |
-| 76  | [Link]()            |
-| 77  | [Link]()            |
-| 78  | [Link]()            |
-| 79  | [Link]()            |
-| 80  | [Link]()            |
-| 81  | [Link]()            |
-| 82  | [Link]()            |
-| 83  | [Link]()            |
-| 84  | [Link]()            |
-| 85  | [Link]()            |
-| 86  | [Link]()            |
-| 87  | [Link]()            |
-| 88  | [Link]()            |
-| 89  | [Link]()            |
-| 90  | [Link]()            |
-| 91  | [Link]()            |
-| 92  | [Link]()            |
-| 93  | [Link]()            |
-| 94  | [Link]()            |
-| 95  | [Link]()            |
-| 96  | [Link]()            |
-| 97  | [Link]()            |
-| 98  | [Link]()            |
-| 99  | [Link]()            |
-| 100 | [Link]()            |
+| Day | Description 	 						| EDA Playground Link 							|
+|:---:|:---------------------------------------:|:-------------------:							|
+| 001   | Simple Mux		 					| [Link](https://www.edaplayground.com/x/9xj2)  |
+| 002   | D-Flip Flop		 					| [Link](https://www.edaplayground.com/x/TEeN)  |
+| 003   | Edge Detector    	 					| [Link](https://www.edaplayground.com/x/ea_U)  |
+| 004   | Simple ALU		 					| [Link](https://www.edaplayground.com/x/ChhP)  |
+| 005   | Odd Counter		 					| [Link](https://www.edaplayground.com/x/meCw)  |
+| 006   | Shift Register	 					| [Link](https://www.edaplayground.com/x/8PUJ)  |
+| 007   | LFSR				 					| [Link](https://www.edaplayground.com/x/ppKU)  |
+| 008   | Bin to Onehot	     					| [Link](https://www.edaplayground.com/x/ixK_)  |
+| 009   | Code Gray			 					| [Link](https://www.edaplayground.com/x/Mtwx)  |
+| 010  	| Self Reloading Counter				| [Link](https://www.edaplayground.com/x/rRed)  |
+| 011  	| Parallel to Serial					| [Link](https://www.edaplayground.com/x/6qDa)  |
+| 012  	| Serial to Parallel Sequence detector	| [Link](https://www.edaplayground.com/x/PZMY)  |
+| 013  	| Advanced Mux							| [Link](https://www.edaplayground.com/x/DJZD)  |
+| 014  	| Priority Arbiter						| [Link](https://www.edaplayground.com/x/grGu)  |
+| 015  	| Round Robin Arbiter					| [Link](https://www.edaplayground.com/x/tdrc)  |
+| 016  	| APB Master							| [Link](https://www.edaplayground.com/x/X8Fx)  |
+| 017  	| Simple Mem Interface					| [Link](https://www.edaplayground.com/x/A4tu)  |
+| 018  	| APB Slave Interface					| [Link](https://www.edaplayground.com/x/iTc4)	|
+| 019  	| Parameterized Synch FIFO				| [Link](https://www.edaplayground.com/x/G_T9)  |
+| 020  	| Smaller Blocks into Bigger Systems	| [Link](https://www.edaplayground.com/x/YXQH)  |
+| 021  	| Second Highest Arbiter				| [Link](https://www.edaplayground.com/x/Yjb7)  |
+| 022  	| Class Based TB						| [Link](https://www.edaplayground.com/x/wLjY)  |
+| 023  	| Modports								| [Link](https://www.edaplayground.com/x/Ttad)  |
+| 024  	| Class Based TB 2						| [Link](https://www.edaplayground.com/x/wtWw)  |
+| 025  	| Randomize TB							| [Link](https://www.edaplayground.com/x/rfSb)  |
+| 026  	| Pattern Gen							| [Link](https://www.edaplayground.com/x/SrRh)  |
+| 027  	| SV Queues								| [Link](https://www.edaplayground.com/x/uQX6)  |
+| 028  	| SV Associative Arrays					| [Link](https://www.edaplayground.com/x/YTid)  |
+| 029  	| Events								| [Link](https://www.edaplayground.com/x/qhiJ)  |
+| 030  	| Mailbox								| [Link](https://www.edaplayground.com/x/Yxus)  |
+| 031  	| Function V Task						| [Link](https://www.edaplayground.com/x/8m2N)  |
+| 032  	| 			| [Link]()            |
+| 033  	| 			| [Link]()            |
+| 034  	| 			| [Link]()            |
+| 035  	| 			| [Link]()            |
+| 036  	| 			| [Link]()            |
+| 037  	| 			| [Link]()            |
+| 038  	| 			| [Link]()            |
+| 039  	| 			| [Link]()            |
+| 040  	| 			| [Link]()            |
+| 041  	| 			| [Link]()            |
+| 042  	| 			| [Link]()            |
+| 043  	| 			| [Link]()            |
+| 044  	| 			| [Link]()            |
+| 045  	| 			| [Link]()            |
+| 046  	| 			| [Link]()            |
+| 047  	| 			| [Link]()            |
+| 048  	| 			| [Link]()            |
+| 049  	| 			| [Link]()            |
+| 050  	| 			| [Link]()            |
+| 051  	| 			| [Link]()            |
+| 052  	| 			| [Link]()            |
+| 053  	| 			| [Link]()            |
+| 054  	| 			| [Link]()            |
+| 055  	| 			| [Link]()            |
+| 056  	| 			| [Link]()            |
+| 057  	| 			| [Link]()            |
+| 058  	| 			| [Link]()            |
+| 059  	| 			| [Link]()            |
+| 060  	| 			| [Link]()            |
+| 061  	| 			| [Link]()            |
+| 062  	| 			| [Link]()            |
+| 063  	| 			| [Link]()            |
+| 064  	| 			| [Link]()            |
+| 065  	| 			| [Link]()            |
+| 066  	| 			| [Link]()            |
+| 067  	| 			| [Link]()            |
+| 068  	| 			| [Link]()            |
+| 069  	| 			| [Link]()            |
+| 070  	| 			| [Link]()            |
+| 071  	| 			| [Link]()            |
+| 072  	| 			| [Link]()            |
+| 073  	| 			| [Link]()            |
+| 074  	| 			| [Link]()            |
+| 075  	| 			| [Link]()            |
+| 076  	| 			| [Link]()            |
+| 077  	| 			| [Link]()            |
+| 078  	| 			| [Link]()            |
+| 079  	| 			| [Link]()            |
+| 080  	| 			| [Link]()            |
+| 081  	| 			| [Link]()            |
+| 082  	| 			| [Link]()            |
+| 083  	| 			| [Link]()            |
+| 084  	| 			| [Link]()            |
+| 085  	| 			| [Link]()            |
+| 086  	| 			| [Link]()            |
+| 087  	| 			| [Link]()            |
+| 088  	| 			| [Link]()            |
+| 089  	| 			| [Link]()            |
+| 090  	| 			| [Link]()            |
+| 091  	| 			| [Link]()            |
+| 092  	| 			| [Link]()            |
+| 093  	| 			| [Link]()            |
+| 094  	| 			| [Link]()            |
+| 095  	| 			| [Link]()            |
+| 096  	| 			| [Link]()            |
+| 097  	| 			| [Link]()            |
+| 098  	| 			| [Link]()            |
+| 099  	| 			| [Link]()            |
+| 100  	| 			| [Link]()            |
 
 ## Author
 
