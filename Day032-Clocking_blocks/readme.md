@@ -42,4 +42,5 @@ This task involves building a class-based testbench that drives an APB slave (th
     ```systemverilog
     // Wait for one cycle of the clocking block's event
     @(vif.tb_cb);
-    
+	```
+* **Check out this clocking block paper Rahul shared on his Linkedin for more info on how to correctly use clocking blocks: [Link](https://www.verilab.com/post/snug-austin-2012-best-paper-taming-testbench-timing-times-up-for-clocking-block-confusion) **
