@@ -101,9 +101,9 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 029  	| Events								| [Link](https://www.edaplayground.com/x/qhiJ)  |
 | 030  	| Mailbox								| [Link](https://www.edaplayground.com/x/Yxus)  |
 | 031  	| Function V Task						| [Link](https://www.edaplayground.com/x/8m2N)  |
-| 032  	| Clocking Blocks						| [Link](https://www.edaplayground.com/x/nG29)            |
-| 033  	| Forks		| [Link](https://www.edaplayground.com/x/wZ64)            |
-| 034  	| 			| [Link]()            |
+| 032  	| Clocking Blocks						| [Link](https://www.edaplayground.com/x/nG29)  |
+| 033  	| Forks									| [Link](https://www.edaplayground.com/x/wZ64)  |
+| 034  	| Fork_Join_any							| [Link](https://www.edaplayground.com/x/kadJ)  |
 | 035  	| 			| [Link]()            |
 | 036  	| 			| [Link]()            |
 | 037  	| 			| [Link]()            |
