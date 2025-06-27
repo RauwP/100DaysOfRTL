@@ -7,20 +7,20 @@ class day24;
 		vif.cb.penable <= 1'b0;
 		
 		$display("Starting stim now...");
-		repeat(5) @(posedge vif.clk);
+      repeat(5) @(vif.cb);
 		
 		forever begin
 			vif.cb.psel <= 1'b1; //setup
-			@(posedge vif.clk);
+          	@(vif.cb);
 			vif.cb.penable <= 1'b1; //access
 			vif.cb.paddr[9:0] <= 10'h3EC;
 			vif.cb.pwrite <= $urandom_range(0,10) % 2;
 			vif.cb.pwdata <= $urandom_range(0, 1023);
 			wait(vif.cb.pready);
-			@(posedge vif.clk);
+          	@(vif.cb);
 			vif.cb.psel <= 1'b0;
 			vif.cb.penable <= 1'b0;
-			repeat(2) @(posedge vif.clk);
+          	repeat(2) @(vif.cb);
 		end
 	endtask
 	
@@ -31,12 +31,12 @@ class day24;
 		$display("Starting check now...");
 		
 		forever begin
-			if(vif.penable & vif.cb.pready & vif.pwrite) begin
+          if(vif.cb.penable & vif.cb.pready & vif.cb.pwrite) begin
 				first_write_complete = 1;
-				last_write = vif.pwdata;
+				last_write = vif.cb.pwdata;
 			end
-			if(first_write_complete && (vif.penable & vif.cb.pready & ~vif.pwrite) && (last_write !== vif.cb.prdata)) $display("%t Last write doesnt match. Expected: 0x%8x Got 0x%8x.", $time, last_write, vif.cb.prdata);
-			@(posedge vif.clk);
+          if(first_write_complete && (vif.cb.penable & vif.cb.pready & ~vif.cb.pwrite) && (last_write !== vif.cb.prdata)) $display("%t Last write doesnt match. Expected: 0x%8x Got 0x%8x.", $time, last_write, vif.cb.prdata);
+          	@(vif.cb);
 		end
 	endtask
 endclass
@@ -71,12 +71,12 @@ module day32_tb();
 		reset <= 1'b0;
 		repeat(150) @(posedge clk);
 		#1;
-		$display("Tests Complete!");
+      	$display("Tests Complete!");
 		$finish();
 	end
 	
 	initial begin
-		$dumpfile("day32.vcd");
-		$dumpvars(0, day32_tb);
+      $dumpfile("day32.vcd");
+      $dumpvars(0, day32_tb);
 	end
 endmodule
