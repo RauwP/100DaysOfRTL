@@ -68,8 +68,8 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 
 ## Project Quick Links
 
-| Day | Description 	 						| EDA Playground Link 							|
-|:---:|:---------------------------------------:|:-------------------:							|
+| Day   | Description 	 						| EDA Playground Link 							|
+|-------|---------------------------------------|-----------------------------------------------|
 | 001   | Simple Mux		 					| [Link](https://www.edaplayground.com/x/9xj2)  |
 | 002   | D-Flip Flop		 					| [Link](https://www.edaplayground.com/x/TEeN)  |
 | 003   | Edge Detector    	 					| [Link](https://www.edaplayground.com/x/ea_U)  |
