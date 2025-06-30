@@ -105,11 +105,11 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 033  	| Forks									| [Link](https://www.edaplayground.com/x/wZ64)  |
 | 034  	| Fork Join any							| [Link](https://www.edaplayground.com/x/kadJ)  |
 | 035  	| Fork Join none						| [Link](https://www.edaplayground.com/x/cLLH)  |
-| 036  	| Fork Disable							| [Link](https://www.edaplayground.com/x/Yc5F)            |
-| 037  	| Fork Wait								| [Link](https://www.edaplayground.com/x/9bnB)            |
-| 038  	| Automatic Variables					| [Link](https://www.edaplayground.com/x/up64)            |
-| 039  	| Direct Programming Interface (DPI)	| [Link](https://www.edaplayground.com/x/Yc5m)            |
-| 040  	| 			| [Link]()            |
+| 036  	| Fork Disable							| [Link](https://www.edaplayground.com/x/Yc5F)  |
+| 037  	| Fork Wait								| [Link](https://www.edaplayground.com/x/9bnB)  |
+| 038  	| Automatic Variables					| [Link](https://www.edaplayground.com/x/up64)  |
+| 039  	| Direct Programming Interface (DPI)	| [Link](https://www.edaplayground.com/x/Yc5m)  |
+| 040  	| Mux_tb								| [Link](https://www.edaplayground.com/x/KxCf)  |
 | 041  	| 			| [Link]()            |
 | 042  	| 			| [Link]()            |
 | 043  	| 			| [Link]()            |
