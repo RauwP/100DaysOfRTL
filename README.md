@@ -109,8 +109,8 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 037  	| Fork Wait								| [Link](https://www.edaplayground.com/x/9bnB)  |
 | 038  	| Automatic Variables					| [Link](https://www.edaplayground.com/x/up64)  |
 | 039  	| Direct Programming Interface (DPI)	| [Link](https://www.edaplayground.com/x/Yc5m)  |
-| 040  	| Mux_tb								| [Link](https://www.edaplayground.com/x/KxCf)  |
-| 041  	| 			| [Link]()            |
+| 040  	| Mux tb								| [Link](https://www.edaplayground.com/x/KxCf)  |
+| 041  	| ALU tb								| [Link](https://www.edaplayground.com/x/G2U3)  |
 | 042  	| 			| [Link]()            |
 | 043  	| 			| [Link]()            |
 | 044  	| 			| [Link]()            |
