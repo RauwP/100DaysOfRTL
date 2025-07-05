@@ -111,8 +111,8 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 039  	| Direct Programming Interface (DPI)	| [Link](https://www.edaplayground.com/x/Yc5m)  |
 | 040  	| Mux tb								| [Link](https://www.edaplayground.com/x/KxCf)  |
 | 041  	| ALU tb								| [Link](https://www.edaplayground.com/x/G2U3)  |
-| 042  	| 			| [Link]()            |
-| 043  	| 			| [Link]()            |
+| 042  	| Priority Arbiter tb					| [Link](https://www.edaplayground.com/x/tVwj)  |
+| 043  	| DFF tb								| [Link](https://www.edaplayground.com/x/Bdbw)  |
 | 044  	| 			| [Link]()            |
 | 045  	| 			| [Link]()            |
 | 046  	| 			| [Link]()            |
