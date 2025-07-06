@@ -32,12 +32,14 @@ module day43_tb();
 	as_item = new();
 		forever begin
           	#($urandom_range(100,300));
+			if($time % 5 == 0) #1;
 			reset = 1'b1;
           	as_item.reset = 1'b1;
           @(intf.as);
           	sample_no_reset(as_item);
 			as_item.print("ASYNC-DRIVER");
 			#($urandom_range(1,50));
+			if($time % 5 == 0) #1;
 			as_item.reset = 1'b0;
 			reset <= 1'b0;
           @(negedge reset);

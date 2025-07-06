@@ -113,7 +113,7 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 041  	| ALU tb								| [Link](https://www.edaplayground.com/x/G2U3)  |
 | 042  	| Priority Arbiter tb					| [Link](https://www.edaplayground.com/x/tVwj)  |
 | 043  	| DFF tb								| [Link](https://www.edaplayground.com/x/Bdbw)  |
-| 044  	| 			| [Link]()            |
+| 044  	| Parameterized Classes					| [Link](https://www.edaplayground.com/x/6gND)  |
 | 045  	| 			| [Link]()            |
 | 046  	| 			| [Link]()            |
 | 047  	| 			| [Link]()            |
