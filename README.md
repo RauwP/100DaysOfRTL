@@ -1,70 +1,56 @@
-# 100 Days of RTL Challenge - Solutions
+# 100 Days of RTL Challenge - My Solutions
 
 ## Introduction
 
-This repository contains my daily solutions to the **100 Days of RTL** challenge by Rahul Behl (QuickSilicon). The challenge provides 100 hands-on exercises designed to build a strong, practical foundation in digital logic design and modern verification methodologies using Verilog and SystemVerilog.
+Welcome to my repository for the **100 Days of RTL** challenge, created by Rahul Behl of QuickSilicon. This repository documents my daily progress through 100 hands-on exercises designed to build a strong, practical foundation in digital logic design and modern verification methodologies using Verilog and SystemVerilog.
 
-## Challenge Overview
+This journey progresses from fundamental RTL design, to advanced class-based verification, and ultimately to complex topics like UVM and processor design.
 
-The challenge is structured into two main phases, progressing from fundamental hardware design to advanced verification techniques.
+## Challenge Phases
+
+The challenge is structured to build skills progressively, from the ground up.
 
 ### Phase 1: RTL Design Fundamentals (Days 1-21)
+This initial phase focuses on the core digital logic building blocks.
+* **Topics Covered**: Combinational logic (multiplexers, arbiters), sequential logic (flip-flops, counters, FSMs), arithmetic circuits (ALUs), and basic bus protocols.
 
-This initial phase focuses on core digital design concepts and practices.
+### Phase 2: SystemVerilog for Verification (Days 22-44)
+This phase transitions from design to modern verification, focusing on object-oriented programming and building robust, reusable testbenches.
 * **Topics Covered**:
-    * **Combinational Logic**: Multiplexers, encoders, decoders, arbiters.
-    * **Sequential Logic**: Flip-flops, shift registers, counters, FSMs.
-    * **Arithmetic Circuits**: Adders, ALUs, multipliers.
-    * **Bus Protocols**: Basic implementation of protocols like APB.
+    * **Class-Based Testbenches**: Building modular environments with drivers, monitors, and scoreboards.
+    * **Stimulus Generation**: Using randomization (`rand`) and constraints (`dist`) for intelligent stimulus.
+    * **Advanced Testbench Concepts**: Interfaces, virtual interfaces, and clocking blocks for synchronization.
+    * **Sequential & Asynchronous Logic Verification**: Building stateful scoreboards and advanced monitors to verify complex DUTs.
 
-### Phase 2: SystemVerilog for Verification (Days 22-31)
-
-This phase shifts focus to modern, class-based verification techniques essential for robustly testing complex designs.
+### Phase 3: Formal Verification (Days 45-55)
+This phase introduces a new paradigm of verification: using mathematical proofs to ensure design correctness.
 * **Topics Covered**:
-    * **Object-Oriented Programming**: Classes, randomization, and constraints.
-    * **Advanced Testbench Concepts**: Interfaces, virtual interfaces, and clocking blocks.
-    * **Synchronization**: Events and mailboxes for inter-process communication.
-    * **Data Structures**: Using queues and associative arrays for scoreboarding.
+    * **SystemVerilog Assertions (SVA)**: Writing properties to capture design intent.
+    * **Local Formal Toolchain**: Using Yosys and SymbiYosys with `Makefiles` to run proofs locally.
+
+### Phase 4: UVM Methodologies (Days 56-77)
+This section dives into the Universal Verification Methodology (UVM), the industry standard for building powerful and scalable testbenches.
+* **Topics Covered**: UVM components, factory, sequences, analysis ports, and building a full UVM environment.
+
+### Phase 5: Single-Cycle RISC-V Processor (Days 78-99)
+The final major project of the challenge is to design, implement, and verify a single-cycle RISC-V processor.
 
 ## Tools & Workflow
 
-The workflow for this repository is split into two parts, corresponding to the phases of the challenge.
+#### **1. RTL Design & Simulation (Days 1-21)**
+* **Tools**: Icarus Verilog (`iverilog`) for simulation.
+* **Process**: Each directory contains a `Makefile` that automates compiling the RTL and testbench and running the simulation.
 
-#### **Days 1-21 (RTL Design)**
-
-The early exercises are self-contained and can be run locally using open-source tools.
-* **Tools**: Icarus Verilog (`iverilog`) for simulation and Yosys for synthesis.
-* **Process**: Each directory contains a `Makefile` that automates compiling the RTL and testbench, running the simulation, and generating a `.vcd` waveform file.
-
-    ```bash
-    cd Day001-Mux
-    make
-    ```
-
-#### **Days 22+ (SystemVerilog Verification)**
-
-Starting from Day 22, the exercises leverage advanced SystemVerilog features that are best supported by free commercial simulators.
+#### **2. Advanced SystemVerilog Verification (Days 22-44, 56-77, 79-100)**
+These exercises leverage advanced SystemVerilog and UVM features best supported by modern commercial simulators.
 * **Tool**: **EDA Playground** is used for these exercises.
-* **Process**: There are no `Makefile`s for these days. Each `DayXXX` directory includes a `README.md` that provides an explanation to the challenge, in EDA Playground the code can be simulated directly in the browser.
+* **Process**: The code for these days is designed to be run directly in the browser on EDA Playground.
 
-## Repository Structure
+#### **3. Formal Verification (Days 45-55)**
+This section is designed to be run on a local machine.
+* **Tools**: **Yosys** and **SymbiYosys**.
+* **Process**: Each directory contains the SystemVerilog design files, a `Makefile`, that automatically creates and runs a SymbiYosys configuration file (`.sby`) to automate the formal proof process from the command line.
 
-Each exercise is organized under its corresponding day in a folder named `DayXXX-Some_Name`.
-
-```
-# Example for Days 1-22
-├── Day001-Mux/
-│   ├── day1.sv          # RTL module and Testbench
-│   ├── day1_tb.sv       # RTL testbench module
-│   ├── README.md        # Description of the task
-│   └── Makefile         # Build & simulate script
-
-# Example for Days 23-31
-├── Day031-Function_v_Task/
-│   ├── day31.sv         # SystemVerilog code (DUT, TB, etc.)
-│   └── README.md        # Description and link to EDA Playground
-...
-```
 
 ## Project Quick Links
 
@@ -174,4 +160,5 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 ## Author
 
 **Gad B**, Electrical Engineering Student
-Email: [rauwp@duck.com](mailto:rauwp@duck.com)
+* Email: [rauwp@duck.com](mailto:rauwp@duck.com)
+* LinkedIn: [Gad Barash](https://www.linkedin.com/in/gad-barash/)
