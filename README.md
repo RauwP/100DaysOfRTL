@@ -114,8 +114,8 @@ Each exercise is organized under its corresponding day in a folder named `DayXXX
 | 042  	| Priority Arbiter tb					| [Link](https://www.edaplayground.com/x/tVwj)  |
 | 043  	| DFF tb								| [Link](https://www.edaplayground.com/x/Bdbw)  |
 | 044  	| Parameterized Classes					| [Link](https://www.edaplayground.com/x/6gND)  |
-| 045  	| 			| [Link]()            |
-| 046  	| 			| [Link]()            |
+| 045  	| Self Loading Counter tb				| [Link](https://www.edaplayground.com/x/wpzB)  |
+| 046  	| Formal Verification Mux				| No Link            |
 | 047  	| 			| [Link]()            |
 | 048  	| 			| [Link]()            |
 | 049  	| 			| [Link]()            |
