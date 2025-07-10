@@ -101,9 +101,9 @@ This section is designed to be run on a local machine.
 | 043  	| DFF tb								| [Link](https://www.edaplayground.com/x/Bdbw)  |
 | 044  	| Parameterized Classes					| [Link](https://www.edaplayground.com/x/6gND)  |
 | 045  	| Self Loading Counter tb				| [Link](https://www.edaplayground.com/x/wpzB)  |
-| 046  	| Formal Verification Mux				| No Link            |
-| 047  	| 			| [Link]()            |
-| 048  	| 			| [Link]()            |
+| 046  	| Formal Verification Mux				| No Link            							|
+| 047  	| Formal Verification ALU				| No Link							            |
+| 048  	| Formal Verification DFF				| No Link     								    |
 | 049  	| 			| [Link]()            |
 | 050  	| 			| [Link]()            |
 | 051  	| 			| [Link]()            |
