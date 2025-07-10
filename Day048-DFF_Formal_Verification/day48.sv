@@ -40,7 +40,6 @@ module day48 (
 
 		//asyncrst gets zero immidiatley if the rst is raised
 		`ASSERT_I(AsyncRstFlopAsyncReset_A, `IMPLIES(reset, q_asyncrst_o == 1'b0))
-		`ASSERT(AsyncRstFlopReset_A, `IMPLIES($past(reset), q_asyncrst_o == 1'b0))
-		`ASSERT(AsyncRstFlopData_A, `IMPLIES(!$past(reset), q_asyncrst_o == $past(d_i)))
+		`ASSERT(AsyncRstFlopData_A, q_asyncrst_o == $past(d_i))
 	`endif
 endmodule
