@@ -54,58 +54,58 @@ This section is designed to be run on a local machine.
 
 ## Project Quick Links
 
-| Day   | Description 	 						| EDA Playground Link 							|
-|-------|---------------------------------------|-----------------------------------------------|
-| 001   | Simple Mux		 					| [Link](https://www.edaplayground.com/x/9xj2)  |
-| 002   | D-Flip Flop		 					| [Link](https://www.edaplayground.com/x/TEeN)  |
-| 003   | Edge Detector    	 					| [Link](https://www.edaplayground.com/x/ea_U)  |
-| 004   | Simple ALU		 					| [Link](https://www.edaplayground.com/x/ChhP)  |
-| 005   | Odd Counter		 					| [Link](https://www.edaplayground.com/x/meCw)  |
-| 006   | Shift Register	 					| [Link](https://www.edaplayground.com/x/8PUJ)  |
-| 007   | LFSR				 					| [Link](https://www.edaplayground.com/x/ppKU)  |
-| 008   | Bin to Onehot	     					| [Link](https://www.edaplayground.com/x/ixK_)  |
-| 009   | Code Gray			 					| [Link](https://www.edaplayground.com/x/Mtwx)  |
-| 010  	| Self Reloading Counter				| [Link](https://www.edaplayground.com/x/rRed)  |
-| 011  	| Parallel to Serial					| [Link](https://www.edaplayground.com/x/6qDa)  |
-| 012  	| Serial to Parallel Sequence detector	| [Link](https://www.edaplayground.com/x/PZMY)  |
-| 013  	| Advanced Mux							| [Link](https://www.edaplayground.com/x/DJZD)  |
-| 014  	| Priority Arbiter						| [Link](https://www.edaplayground.com/x/grGu)  |
-| 015  	| Round Robin Arbiter					| [Link](https://www.edaplayground.com/x/tdrc)  |
-| 016  	| APB Master							| [Link](https://www.edaplayground.com/x/X8Fx)  |
-| 017  	| Simple Mem Interface					| [Link](https://www.edaplayground.com/x/A4tu)  |
-| 018  	| APB Slave Interface					| [Link](https://www.edaplayground.com/x/iTc4)	|
-| 019  	| Parameterized Synch FIFO				| [Link](https://www.edaplayground.com/x/G_T9)  |
-| 020  	| Smaller Blocks into Bigger Systems	| [Link](https://www.edaplayground.com/x/YXQH)  |
-| 021  	| Second Highest Arbiter				| [Link](https://www.edaplayground.com/x/Yjb7)  |
-| 022  	| Class Based TB						| [Link](https://www.edaplayground.com/x/wLjY)  |
-| 023  	| Modports								| [Link](https://www.edaplayground.com/x/Ttad)  |
-| 024  	| Class Based TB 2						| [Link](https://www.edaplayground.com/x/wtWw)  |
-| 025  	| Randomize TB							| [Link](https://www.edaplayground.com/x/rfSb)  |
-| 026  	| Pattern Gen							| [Link](https://www.edaplayground.com/x/SrRh)  |
-| 027  	| SV Queues								| [Link](https://www.edaplayground.com/x/uQX6)  |
-| 028  	| SV Associative Arrays					| [Link](https://www.edaplayground.com/x/YTid)  |
-| 029  	| Events								| [Link](https://www.edaplayground.com/x/qhiJ)  |
-| 030  	| Mailbox								| [Link](https://www.edaplayground.com/x/Yxus)  |
-| 031  	| Function V Task						| [Link](https://www.edaplayground.com/x/8m2N)  |
-| 032  	| Clocking Blocks						| [Link](https://www.edaplayground.com/x/nG29)  |
-| 033  	| Forks									| [Link](https://www.edaplayground.com/x/wZ64)  |
-| 034  	| Fork Join any							| [Link](https://www.edaplayground.com/x/kadJ)  |
-| 035  	| Fork Join none						| [Link](https://www.edaplayground.com/x/cLLH)  |
-| 036  	| Fork Disable							| [Link](https://www.edaplayground.com/x/Yc5F)  |
-| 037  	| Fork Wait								| [Link](https://www.edaplayground.com/x/9bnB)  |
-| 038  	| Automatic Variables					| [Link](https://www.edaplayground.com/x/up64)  |
-| 039  	| Direct Programming Interface (DPI)	| [Link](https://www.edaplayground.com/x/Yc5m)  |
-| 040  	| Mux tb								| [Link](https://www.edaplayground.com/x/KxCf)  |
-| 041  	| ALU tb								| [Link](https://www.edaplayground.com/x/G2U3)  |
-| 042  	| Priority Arbiter tb					| [Link](https://www.edaplayground.com/x/tVwj)  |
-| 043  	| DFF tb								| [Link](https://www.edaplayground.com/x/Bdbw)  |
-| 044  	| Parameterized Classes					| [Link](https://www.edaplayground.com/x/6gND)  |
-| 045  	| Self Loading Counter tb				| [Link](https://www.edaplayground.com/x/wpzB)  |
-| 046  	| Formal Verification Mux				| No Link            							|
-| 047  	| Formal Verification ALU				| No Link							            |
-| 048  	| Formal Verification DFF				| No Link     								    |
-| 049  	| 			| [Link]()            |
-| 050  	| 			| [Link]()            |
+| Day   | Description 	 								| EDA Playground Link 							|
+|-------|-----------------------------------------------|-----------------------------------------------|
+| 001   | Simple Mux		 							| [Link](https://www.edaplayground.com/x/9xj2)  |
+| 002   | D-Flip Flop		 							| [Link](https://www.edaplayground.com/x/TEeN)  |
+| 003   | Edge Detector    	 							| [Link](https://www.edaplayground.com/x/ea_U)  |
+| 004   | Simple ALU		 							| [Link](https://www.edaplayground.com/x/ChhP)  |
+| 005   | Odd Counter		 							| [Link](https://www.edaplayground.com/x/meCw)  |
+| 006   | Shift Register	 							| [Link](https://www.edaplayground.com/x/8PUJ)  |
+| 007   | LFSR				 							| [Link](https://www.edaplayground.com/x/ppKU)  |
+| 008   | Bin to Onehot	     							| [Link](https://www.edaplayground.com/x/ixK_)  |
+| 009   | Code Gray			 							| [Link](https://www.edaplayground.com/x/Mtwx)  |
+| 010  	| Self Reloading Counter						| [Link](https://www.edaplayground.com/x/rRed)  |
+| 011  	| Parallel to Serial							| [Link](https://www.edaplayground.com/x/6qDa)  |
+| 012  	| Serial to Parallel Sequence detector			| [Link](https://www.edaplayground.com/x/PZMY)  |
+| 013  	| Advanced Mux									| [Link](https://www.edaplayground.com/x/DJZD)  |
+| 014  	| Priority Arbiter								| [Link](https://www.edaplayground.com/x/grGu)  |
+| 015  	| Round Robin Arbiter							| [Link](https://www.edaplayground.com/x/tdrc)  |
+| 016  	| APB Master									| [Link](https://www.edaplayground.com/x/X8Fx)  |
+| 017  	| Simple Mem Interface							| [Link](https://www.edaplayground.com/x/A4tu)  |
+| 018  	| APB Slave Interface							| [Link](https://www.edaplayground.com/x/iTc4)	|
+| 019  	| Parameterized Synch FIFO						| [Link](https://www.edaplayground.com/x/G_T9)  |
+| 020  	| Smaller Blocks into Bigger Systems			| [Link](https://www.edaplayground.com/x/YXQH)  |
+| 021  	| Second Highest Arbiter						| [Link](https://www.edaplayground.com/x/Yjb7)  |
+| 022  	| Class Based TB								| [Link](https://www.edaplayground.com/x/wLjY)  |
+| 023  	| Modports										| [Link](https://www.edaplayground.com/x/Ttad)  |
+| 024  	| Class Based TB 2								| [Link](https://www.edaplayground.com/x/wtWw)  |
+| 025  	| Randomize TB									| [Link](https://www.edaplayground.com/x/rfSb)  |
+| 026  	| Pattern Gen									| [Link](https://www.edaplayground.com/x/SrRh)  |
+| 027  	| SV Queues										| [Link](https://www.edaplayground.com/x/uQX6)  |
+| 028  	| SV Associative Arrays							| [Link](https://www.edaplayground.com/x/YTid)  |
+| 029  	| Events										| [Link](https://www.edaplayground.com/x/qhiJ)  |
+| 030  	| Mailbox										| [Link](https://www.edaplayground.com/x/Yxus)  |
+| 031  	| Function V Task								| [Link](https://www.edaplayground.com/x/8m2N)  |
+| 032  	| Clocking Blocks								| [Link](https://www.edaplayground.com/x/nG29)  |
+| 033  	| Forks											| [Link](https://www.edaplayground.com/x/wZ64)  |
+| 034  	| Fork Join any									| [Link](https://www.edaplayground.com/x/kadJ)  |
+| 035  	| Fork Join none								| [Link](https://www.edaplayground.com/x/cLLH)  |
+| 036  	| Fork Disable									| [Link](https://www.edaplayground.com/x/Yc5F)  |
+| 037  	| Fork Wait										| [Link](https://www.edaplayground.com/x/9bnB)  |
+| 038  	| Automatic Variables							| [Link](https://www.edaplayground.com/x/up64)  |
+| 039  	| Direct Programming Interface (DPI)			| [Link](https://www.edaplayground.com/x/Yc5m)  |
+| 040  	| Mux tb										| [Link](https://www.edaplayground.com/x/KxCf)  |
+| 041  	| ALU tb										| [Link](https://www.edaplayground.com/x/G2U3)  |
+| 042  	| Priority Arbiter tb							| [Link](https://www.edaplayground.com/x/tVwj)  |
+| 043  	| DFF tb										| [Link](https://www.edaplayground.com/x/Bdbw)  |
+| 044  	| Parameterized Classes							| [Link](https://www.edaplayground.com/x/6gND)  |
+| 045  	| Self Loading Counter tb						| [Link](https://www.edaplayground.com/x/wpzB)  |
+| 046  	| Formal Verification Mux						| No Link            							|
+| 047  	| Formal Verification ALU						| No Link							            |
+| 048  	| Formal Verification DFF						| No Link     								    |
+| 049  	| Formal Verification Self Reloading Counter	| No Link             							|
+| 050  	| Formal Verification Arbiter					| No Link             							|
 | 051  	| 			| [Link]()            |
 | 052  	| 			| [Link]()            |
 | 053  	| 			| [Link]()            |
