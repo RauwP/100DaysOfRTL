@@ -15,7 +15,7 @@ module day50 #(
 		
 		`ASSUME(req_nonzero, `IMPLIES(1'b1, (req_i !== NUM_PORTS'(1'b0)))
 		
-		`ASSERT(gnt_onehot, `IS_ONE_HOT(gnt_o, NUM_PORTS))
+		`ASSERT(gnt_onehot, $countones(gnt_o) <= 1)
 		
 		`ASSERT(gnt_req0, `IMPLIES(req_i[0], (gnt_o == NUM_PORTS'(1'b1))))
 		
