@@ -106,7 +106,7 @@ This section is designed to be run on a local machine.
 | 048  	| Formal Verification DFF						| No Link     								    |
 | 049  	| Formal Verification Self Reloading Counter	| No Link             							|
 | 050  	| Formal Verification Arbiter					| No Link             							|
-| 051  	| 			| [Link]()            |
+| 051  	| Formal Verification APB Master				| No Link       							    |
 | 052  	| 			| [Link]()            |
 | 053  	| 			| [Link]()            |
 | 054  	| 			| [Link]()            |
