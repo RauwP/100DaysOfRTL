@@ -108,7 +108,7 @@ This section is designed to be run on a local machine.
 | 050  	| Formal Verification Arbiter					| No Link             							|
 | 051  	| Formal Verification APB Master				| No Link       							    |
 | 052  	| Formal Verification APB Slave					| No Link       			     				|
-| 053  	| Formal Verification APB Slave w\ Waits!		| No Link		            					|
+| 053  	| Formal Verification APB Slave w\ Data		| No Link		            					|
 | 054  	| 			| [Link]()            |
 | 055  	| 			| [Link]()            |
 | 056  	| 			| [Link]()            |

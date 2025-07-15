@@ -1,56 +1,46 @@
-# Day 53: Formal Verification for an APB Slave (with Wait States)
+# Day 53: Formal Verification for an APB Slave (Data Integrity Check)
 
 ## Task Description
 
-This challenge enhances the formal verification of the APB Slave by introducing a critical real-world feature: **wait states**. While the previous slave was assumed to respond in a single cycle, this task involves proving the correctness of a slave that can assert `pready = 0` to extend the APB ACCESS phase over multiple clock cycles.
+This challenge uses formal verification to prove a critical property of the APB Slave from Day 18: **data integrity**. The goal is to mathematically prove that if you write a value to a specific memory address, a subsequent read from that same address will return the exact same value.
 
-The goal is to use the assume-guarantee paradigm to prove that the slave correctly handles multi-cycle transactions and maintains protocol compliance and data integrity throughout.
+This is a powerful formal verification pattern that goes beyond just checking protocol rules. It uses a clever combination of `assume` and `assert` properties to force the tool to explore a specific "write-then-read" scenario and prove its correctness.
 
 ### Core Functionality:
 
-You must write formal properties to verify the slave's behavior, especially during the `ACCESS` state when wait states are inserted.
+The formal proof is structured as an "assume-guarantee" test case with the following parts:
 
-1.  **Assume a Compliant Master:** The assumptions about the master are now even more important. We must assume that if the slave de-asserts `pready`, a compliant master will hold all its control signals (`paddr`, `pwrite`, `psel`, etc.) stable until `pready` goes high.
+1.  **Assume a Compliant Master:** First, a set of `assume` properties are written to constrain the inputs. These assumptions tell the formal tool to only consider scenarios where the master is behaving correctly (e.g., `penable` follows `psel`, signals are stable during wait states, etc.). This is the "assume" part of the proof.
 
-2.  **Assert Correct Slave Behavior:**
-    * **Wait State Logic:** Assert that if the slave is not ready to complete a transfer in the `ACCESS` state, it correctly drives `pready` low.
-    * **Signal Stability:** Assert that during a wait state (when `penable` is high but `pready` is low), the slave's read data output (`prdata`) remains stable and does not change.
-    * **Data Write Integrity:** Assert that an internal memory write only occurs on the single clock edge where `penable` and `pready` are both high. The memory must not be written to during wait states.
-    * **Data Read Integrity:** Assert that the correct data is driven onto `prdata` during the `ACCESS` phase and held stable throughout any wait states until the transaction completes.
+2.  **Force a Write-Then-Read Sequence:** A second set of `assume` properties and helper logic is used to guide the formal tool towards the specific scenario we want to test:
+    * A random, but constant, address (`test_addr`) is created for the proof.
+    * The tool is forced to perform a **write** operation to this `test_addr` first.
+    * A helper flag (`wr_to_test_addr_seen`) is used to track when this write has completed.
+    * The tool is then allowed to perform a **read** operation from the same `test_addr`.
+
+3.  **Assert Data Integrity (The "Guarantee"):**
+    * A helper register inside the formal block "remembers" the data that was written (`pwdata_i`).
+    * The final `assert` property provides the guarantee: it checks that when the read transaction completes, the data from the slave (`prdata_o`) matches the data that was originally written.
 
 ### Key Concepts & Syntax Learned
 
-This task deepens your understanding of writing temporal properties for complex protocol interactions.
+This task is a deep dive into the powerful assume-guarantee paradigm and data integrity checking.
 
-* **Modeling Multi-Cycle Scenarios:** Verifying wait states requires reasoning about signal values across an unknown number of clock cycles. SVA sequences and properties are perfect for this.
-
-* **The `throughout` Operator (Advanced SVA):** This operator is very useful for checking signal stability. The expression `(A) throughout (B)` asserts that property `A` must be true for every clock cycle while sequence `B` is matching.
+* **`(* anyconst *)` attribute:** This is a special formal operator used to create a "random constant." The tool will pick a random value for the variable (e.g., `test_addr`), but will then treat that value as a constant for the entire duration of that specific proof run. This is extremely useful for focusing a proof on a specific, but arbitrary, condition.
 
     ```systemverilog
-    // Example: Assume the master keeps the address stable during wait states.
-    // The sequence `penable && !pready` matches for the duration of the wait.
-    `ASSUME(PaddrStableDuringWait_A,
-        `IMPLIES($rose(penable), $stable(paddr) throughout (penable && !pready))
-    )
+    // Create a random, but stable, address for this proof run.
+    (* anyconst *) logic[3:0] test_addr;
     ```
 
-* **Checking Eventualities:** You need to prove that `pready` will *eventually* go high, preventing the bus from hanging forever. This is often done with a liveness property.
+* **Constraining the Scenario with `assume`:** The power of this proof comes from using `assume` properties to force a sequence of events. By creating a flag like `wr_to_test_addr_seen`, we can write assumptions that change over time.
 
     ```systemverilog
-    // Example: Assert that if we are in the ACCESS state, pready will eventually be asserted.
-    // The sequence `s_eventually` means "at some point in the future".
-    `ASSERT(PreadyEventuallyHigh_A,
-        `IMPLIES(curr_state == ACCESS, s_eventually pready)
-    )
+    // This forces the first transaction to be a write.
+    `ASSUME(paddr_write, `IMPLIES(~wr_to_test_addr_seen, pwrite_i))
     ```
 
-* **Precise Event Triggering:** The data integrity checks must be more precise. The write to memory or the driving of read data should be tied to the exact cycle where the transfer completes (`penable && pready`).
+* **Helper Logic in Formal:** It is very common to add non-synthesizable helper registers and flags inside an `` `ifdef FORMAL `` block. These elements are not part of the DUT but are essential for creating complex proofs. The `pwdata` register that stores the written value is a perfect example of this technique.
 
-    ```systemverilog
-    // Example for a write operation with wait states.
-    `ASSERT(WriteDataCorrect_A,
-        `IMPLIES($past(psel && penable && pwrite && pready),
-                 memory[$past(paddr)] == $past(pwdata))
-    )
-    ```
+* **Assume-Guarantee Verification:** This entire exercise is a practical example of this methodology. We **assume** the master is well-behaved and follows the protocol, and in return, we **guarantee** (by asserting) that our slave will maintain data integrity.
 
