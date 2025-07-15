@@ -32,7 +32,7 @@ formal_build: clean
 	echo prove >> $(DAY).sby
 	echo [options] > $(DAY).sby
 	echo mode bmc >> $(DAY).sby
-	echo depth 1 >> $(DAY).sby
+	echo depth 20 >> $(DAY).sby
 	echo [engines] >> $(DAY).sby
 	echo smtbmc >> $(DAY).sby
 	echo [script] >> $(DAY).sby

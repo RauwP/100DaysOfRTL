@@ -1,4 +1,5 @@
 //day51
+`include "prim_assert.sv"
 module day51 (
   input       wire        clk,
   input       wire        reset,
@@ -51,7 +52,7 @@ module day51 (
 
 
 
-	`ifndef FORMAL
+	`ifdef FORMAL
 	
 		//reset is one for one cycle at the start of the sim
 		logic rst_one_cycle = 1'b0;

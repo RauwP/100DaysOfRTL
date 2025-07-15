@@ -9,10 +9,11 @@ module day46 (
 );
   assign y_o = sel_i ? a_i : b_i;
 
+	`ifdef FORMAL
   // Add assertions to check the mux output
   // sel_i |-> y_o == a_i
   `ASSERT(check_sel_high, `IMPLIES(sel_i, (y_o == a_i)))
   // ~sel_i |-> y_o == b_i
   `ASSERT(check_sel_low, `IMPLIES(~sel_i, (y_o == b_i)))
-
+	`endif
 endmodule

@@ -1,6 +1,6 @@
 # Makefile for Windows (MinGW) and Formal Verification
 
-DAY  = day47
+DAY  = day52
 TIME = $$(date +'%Y%m%d-%H%M%S')
 
 # Set the default target to 'formal'
@@ -32,13 +32,14 @@ formal_build: clean
 	echo prove >> $(DAY).sby
 	echo [options] > $(DAY).sby
 	echo mode bmc >> $(DAY).sby
-	echo depth 5 >> $(DAY).sby
+	echo depth 20 >> $(DAY).sby
 	echo [engines] >> $(DAY).sby
 	echo smtbmc >> $(DAY).sby
 	echo [script] >> $(DAY).sby
 	echo read_verilog -sv -formal -I../ $(DAY).sv >> $(DAY).sby
 	echo prep -top $(DAY) >> $(DAY).sby
 	echo [files] >> $(DAY).sby
+	echo ../Day017-simple_memory_interface/day17.sv >> $(DAY).sby
 	echo $(DAY).sv >> $(DAY).sby
 	echo ../prim_assert.sv >> $(DAY).sby
 	echo ../prim_assert_yosys_macros.svh >> $(DAY).sby
@@ -46,7 +47,7 @@ formal_build: clean
 	echo ../prim_flop_macros.sv >> $(DAY).sby
 
 formal: formal_build
-	sby -f $(DAY).sby
+	sby -f $(DAY).sby || (cd $(DAY)/engine_0 && gtkwave trace.vcd)
 
 # Use Windows-compatible commands for 'clean'
 clean:

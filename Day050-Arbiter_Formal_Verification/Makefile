@@ -31,8 +31,7 @@ formal_build: clean
 	echo [tasks] > $(DAY).sby
 	echo prove >> $(DAY).sby
 	echo [options] > $(DAY).sby
-	echo mode bmc >> $(DAY).sby
-	echo depth 1 >> $(DAY).sby
+	echo mode prove >> $(DAY).sby
 	echo [engines] >> $(DAY).sby
 	echo smtbmc >> $(DAY).sby
 	echo [script] >> $(DAY).sby

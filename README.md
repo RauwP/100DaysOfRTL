@@ -107,8 +107,8 @@ This section is designed to be run on a local machine.
 | 049  	| Formal Verification Self Reloading Counter	| No Link             							|
 | 050  	| Formal Verification Arbiter					| No Link             							|
 | 051  	| Formal Verification APB Master				| No Link       							    |
-| 052  	| 			| [Link]()            |
-| 053  	| 			| [Link]()            |
+| 052  	| Formal Verification APB Slave					| No Link       			     				|
+| 053  	| Formal Verification APB Slave w\ Waits!		| No Link		            					|
 | 054  	| 			| [Link]()            |
 | 055  	| 			| [Link]()            |
 | 056  	| 			| [Link]()            |

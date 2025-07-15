@@ -29,13 +29,29 @@ module day49 (
   		
 	
 	
-	`ifndef FORMAL
+	`ifdef FORMAL
 		
-		`ASSERT(load_val_chk, `IMPLIES($past(load_i), count_o == $past(load_val_i)))
+		logic rst_one_cycle = 1'b0;
+		always_ff @(posedge clk) begin
+			rst_one_cycle <= 1'b1;
+			
+			assume (rst_one_cycle ^ reset);
+		end
 		
-		`ASSERT(reload_val_chk, `IMPLIES($past(count_o) == 4'hF, count_o == load_ff))
+		`ASSUME_ZERO_IN_RESET(load_i)
 		
-		`ASSERT(incr_val_chk, `IMPLIES(!$past(load_i) & !$past(reset) & $past(count_o != 4'hF), count_o == $past(count_o) + 4'h1))
+		logic[3:0] load_val_latch;
 		
+		always_ff @(posedge clk)
+			if(reset)
+				load_val_latch <= 4'h0;
+			else if(load_i)
+				load_val_latch <= load_val_i;
+		
+		`ASSERT(load_val_chk, `IMPLIES($fell(load_i), $past(load_val_i) == count_o))
+		
+		`ASSERT(reload_val_chk, `IMPLIES(~$past(reset) & ~$past(load_i) & $past(count_o == 4'hF), count_o == load_val_latch))
+		
+		`ASSERT(incr_val_chk, `IMPLIES($past(count_o != 4'hF) & ~$past(reset) & ~$past(load_i), $past(count_o) + 4'h1 == count_o))
 	`endif	
 endmodule

@@ -28,18 +28,22 @@ module day48 (
       q_asyncrst_o <= d_i;
 
 
-	`ifndef FORMAL
+	`ifdef FORMAL
+    // This flop is used to identify the initial state (time 0).
+    logic not_initial_state = 1'b0;
+    always_ff @(posedge clk) not_initial_state <= 1'b1;
 	
-		
-		//norst get the previous d_i no matter what.
-		`ASSERT_NODIS(NoRstFlop_A, q_norst_o == $past(d_i))
-		
-		//syncrst gets d_i if in the previous cycle rst wasnt raised, if it was then it gets zero.
-		`ASSERT(SyncRstFlopReset_A, `IMPLIES($past(reset), q_syncrst_o == 1'b0))
-		`ASSERT(SyncRstFlopData_A, `IMPLIES(!$past(reset), q_syncrst_o == $past(d_i)))
+	`ASSUME(Initrst, `IMPLIES(~not_initial_state, reset))
+	
+    // This assertion is not disabled by the `reset` signal.
+    `ASSERT_NODIS(NoRstFlop_A, `IMPLIES(not_initial_state,(q_norst_o == $past(d_i))))
 
-		//asyncrst gets zero immidiatley if the rst is raised
-		`ASSERT_I(AsyncRstFlopAsyncReset_A, `IMPLIES(reset, q_asyncrst_o == 1'b0))
-		`ASSERT(AsyncRstFlopData_A, q_asyncrst_o == $past(d_i))
+    //This single assertion checks both the reset and data-latching behavior.
+    `ASSERT(SyncRstFlop_A, `IMPLIES(not_initial_state,(q_syncrst_o == ($past(reset) ? 1'b0 : $past(d_i)))))
+
+    //The asynchronous reset behavior is combinational and must be checked immediately
+    `ASSERT_I(AsyncRstFlopAsyncReset_A, `IMPLIES(reset, q_asyncrst_o == 1'b0))
+    //The synchronous data path is only checked when reset is low.
+    `ASSERT(AsyncRstFlopData_A, `IMPLIES(not_initial_state, (q_asyncrst_o == ($past(reset) ? 1'b0 : $past(d_i)))))
 	`endif
 endmodule

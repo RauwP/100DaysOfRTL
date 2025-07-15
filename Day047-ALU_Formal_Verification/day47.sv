@@ -32,7 +32,7 @@ module day47 (
     	  alu_o = {7'h0,a_i == b_i};
   	endcase
   end
-  
+	`ifdef FORMAL 
   `ASSERT(op_add, `IMPLIES((op_i == 3'b000), (alu_o == (a_i+b_i))))
   `ASSERT(op_sub, `IMPLIES((op_i == 3'b001), (alu_o == (a_i-b_i))))
   `ASSERT(op_sll, `IMPLIES((op_i == 3'b010), (alu_o == (a_i<<b_i[2:0]))))
@@ -41,5 +41,5 @@ module day47 (
   `ASSERT(op_or, `IMPLIES((op_i == 3'b101), (alu_o == (a_i|b_i))))
   `ASSERT(op_xor, `IMPLIES((op_i == 3'b110), (alu_o == (a_i^b_i))))
   `ASSERT(op_equal, `IMPLIES((op_i == 3'b111), (alu_o == (a_i==b_i))))
-
+	`endif
 endmodule

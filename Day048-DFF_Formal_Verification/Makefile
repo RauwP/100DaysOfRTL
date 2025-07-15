@@ -32,7 +32,7 @@ formal_build: clean
 	echo prove >> $(DAY).sby
 	echo [options] > $(DAY).sby
 	echo mode bmc >> $(DAY).sby
-	echo depth 1 >> $(DAY).sby
+	echo depth 10 >> $(DAY).sby
 	echo [engines] >> $(DAY).sby
 	echo smtbmc >> $(DAY).sby
 	echo [script] >> $(DAY).sby
@@ -46,7 +46,7 @@ formal_build: clean
 	echo ../prim_flop_macros.sv >> $(DAY).sby
 
 formal: formal_build
-	sby -f $(DAY).sby
+	sby -f $(DAY).sby || (cd $(DAY)/engine_0 && gtkwave trace.vcd)
 
 # Use Windows-compatible commands for 'clean'
 clean:
