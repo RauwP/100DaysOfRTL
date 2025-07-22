@@ -112,7 +112,7 @@ This section is designed to be run on a local machine.
 | 054  	| TBA											| No Link            |
 | 055  	| Formal Verification FIFO						| No Link            |
 | 056  	| UVM Hello, World!								| [Link](https://www.edaplayground.com/x/XBvu)            |
-| 057  	| 			| [Link]()            |
+| 057  	| UVM Analysis Ports							| [Link](https://www.edaplayground.com/x/pUs2)            |
 | 058  	| 			| [Link]()            |
 | 059  	| 			| [Link]()            |
 | 060  	| 			| [Link]()            |
