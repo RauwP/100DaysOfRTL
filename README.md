@@ -114,7 +114,7 @@ This section is designed to be run on a local machine.
 | 056  	| UVM Hello, World!								| [Link](https://www.edaplayground.com/x/XBvu)            |
 | 057  	| UVM Analysis Ports							| [Link](https://www.edaplayground.com/x/pUs2)            |
 | 058  	| UVM Driver Sequence Communications			| [Link](https://www.edaplayground.com/x/Q5d9)            |
-| 059  	| 			| [Link]()            |
+| 059  	| UVM Handling Multiple Transactions			| [Link](https://www.edaplayground.com/x/V8Qe)            |
 | 060  	| 			| [Link]()            |
 | 061  	| 			| [Link]()            |
 | 062  	| 			| [Link]()            |
