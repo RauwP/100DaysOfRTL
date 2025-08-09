@@ -117,7 +117,7 @@ This section is designed to be run on a local machine.
 | 059  	| UVM Handling Multiple Transactions			| [Link](https://www.edaplayground.com/x/V8Qe)            |
 | 060  	| UVM Controling Test Duration					| [Link](https://www.edaplayground.com/x/E3D5)            |
 | 061  	| UVM TB for APB Master 1						| [Link](https://www.edaplayground.com/x/udxB)            |
-| 062  	| 			| [Link]()            |
+| 062  	| UVM TB for APB Slave 2			| [Link](https://www.edaplayground.com/x/ZRZR)            |
 | 063  	| 			| [Link]()            |
 | 064  	| 			| [Link]()            |
 | 065  	| 			| [Link]()            |
