@@ -3,7 +3,7 @@
 import uvm_pkg::*;
 
 class apb_slave_agent extends uvm_agent;
-	`uvm_component_utils(apb_slave_agent)
+	`uvm_component_util(apb_slave_agent)
 	
 	apb_slave_driver d0;
 	apb_slave_monitor m0;
@@ -13,7 +13,7 @@ class apb_slave_agent extends uvm_agent;
 		super.new(name, parent);
 	endfunction
 	
-  virtual function void build_phase(uvm_phase phase);
+	virtual function void build_phase(uvm_component phase);
 		super.build_phase(phase);
 		s0 = uvm_sequencer#(apb_slave_item)::type_id::create("s0",this);
 		d0 = apb_slave_driver::type_id::create("d0",this);

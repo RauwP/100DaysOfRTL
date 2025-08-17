@@ -15,10 +15,10 @@ class apb_slave_basic_seq extends uvm_sequence;
 	
 	virtual task body();
 		string tx;
-		
+		apb_slave_item item = apb_slave_item::type_id::create("seq_item");
 		for(int i=0; i<num_txn;i++)begin
 			`uvm_info("SEQUENCE", "Starting new APB Slave item.", UVM_LOW)
-			apb_slave_item item = apb_slave_item::type_id::create("seq_item");
+			
 			
 			start_item(item);
 			item.randomize();

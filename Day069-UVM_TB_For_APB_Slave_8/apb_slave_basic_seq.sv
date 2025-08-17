@@ -7,8 +7,8 @@ class apb_slave_basic_seq extends uvm_sequence;
 	
 	rand int num_txn;
 	
-	function new(string name="apb_slave_basic_seq");
-		super.new(name);
+	function new(string name="apb_slave_basic_seq", uvm_component parent);
+		super.new(name,parent);
 	endfunction
 	
 	constraint apb_num_txn {num_txn inside {[20:100]};}
@@ -18,13 +18,13 @@ class apb_slave_basic_seq extends uvm_sequence;
 		
 		for(int i=0; i<num_txn;i++)begin
 			`uvm_info("SEQUENCE", "Starting new APB Slave item.", UVM_LOW)
-			apb_slave_item item = apb_slave_item::type_id::create("seq_item");
 			
-			start_item(item);
-			item.randomize();
-			tx = item.tx2string();
+			apb_slave_item item = apb_slave_item::type_id::create("seq_item");
+			start_item(seq_item);
+			seq_item.randomize();
+			tx = seq_item.tx2string();
 			`uvm_info("SEQUENCE", $sformatf("Gen a new APB Slave item:\n%s", tx), UVM_LOW)
-			finish_item(item);
+			finish_item(seq_item);
 		end
 		`uvm_info("SEQUENCE","Finished sending APB Slave items.", UVM_LOW)
 	endtask

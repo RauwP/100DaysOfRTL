@@ -3,9 +3,9 @@
 import uvm_pkg::*;
 
 class apb_slave_monitor extends uvm_monitor;
-	`uvm_component_utils(apb_slave_monitor)
-	
-	virtual apb_slave_if vif;
+  `uvm_component_utils(apb_slave_monitor)
+  
+  	virtual apb_slave_if vif;
 	
 	uvm_analysis_port#(apb_slave_item) mon_analysis_port;
 	
@@ -15,7 +15,7 @@ class apb_slave_monitor extends uvm_monitor;
 	
 	virtual function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		if(!uvm_config_db#(virtual apb_slave_if)::get(this,"","apb_slave_if",vif)) begin
+      if(!uvm_config_db#(virtual apb_slave_if)::get(this,"","apb_slave_vif",vif)) begin
 			`uvm_fatal("MONITOR","Couldn't get a handle to the virtual interface")
 		end
 	endfunction
@@ -23,7 +23,7 @@ class apb_slave_monitor extends uvm_monitor;
 	virtual task run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		forever begin
-			@(posedge clk);
+          @(posedge vif.clk);
 			if(vif.psel & vif.penable & vif.pready) begin
 				apb_slave_item item = new;
 				item.paddr = vif.paddr;

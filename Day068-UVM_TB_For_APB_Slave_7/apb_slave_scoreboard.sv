@@ -15,7 +15,7 @@ class apb_slave_scoreboard extends uvm_scoreboard;
 	virtual function void write(apb_slave_item item);
 		logic[31:0] mem_data;
 		//write data to mem on write
-		if(item.psel & item.pready & item.penable & item.pwrite) mem[item.paddr] = item.pwdata;
+      	if(item.psel & item.pready & item.penable & item.pwrite) mem[item.paddr] = item.pwdata;
 		//read data from mem on read, throw out error if data mismatch
 		if(item.psel & item.pready & item.penable & ~item.pwrite) begin
 			mem_data = mem[item.paddr];

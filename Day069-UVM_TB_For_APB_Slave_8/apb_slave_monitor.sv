@@ -3,8 +3,6 @@
 import uvm_pkg::*;
 
 class apb_slave_monitor extends uvm_monitor;
-	`uvm_component_utils(apb_slave_monitor)
-	
 	virtual apb_slave_if vif;
 	
 	uvm_analysis_port#(apb_slave_item) mon_analysis_port;

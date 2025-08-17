@@ -10,7 +10,7 @@ module apb_master(
 	output		wire		pwrite_o,
 	output		wire[31:0]	pwdata_o,
 	input		wire		pready_i,
-	input		wire[31:0]	prdata_i
+	input		wire[31:0]	prdaya_i
 );
 
 typedef enum logic[1:0] {ST_IDLE = 2'b00, ST_SETUP = 2'b01, ST_ACCESS = 2'b10} apb_state_t;
