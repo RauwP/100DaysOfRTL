@@ -122,7 +122,7 @@ This section is designed to be run on a local machine.
 | 064  	| BRING THEM HOME NOW! 							| [Link](https://www.edaplayground.com/x/WcEw)  |
 | 065  	| UVM TB for APB Slave 4						| [Link](https://www.edaplayground.com/x/QydM)  |
 | 066  	| UVM TB for APB Slave 5						| [Link](https://www.edaplayground.com/x/hfw4) 	|
-| 067  	| 												| [Link]()            							|
+| 067  	| UVM TB for APB Slave 6						| [Link](https://www.edaplayground.com/x/ZpB7)	|
 | 068  	| 												| [Link]()            							|
 | 069  	| 												| [Link]()            							|
 | 070  	| 												| [Link]()            							|
