@@ -1,0 +1,38 @@
+//apb slave monitor
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
+class apb_slave_monitor extends uvm_monitor;
+  `uvm_component_utils(apb_slave_monitor)
+  
+  	virtual apb_slave_if vif;
+	
+	uvm_analysis_port#(apb_slave_item) mon_analysis_port;
+	
+	function new(string name="apb_slave_monitor",uvm_component parent);
+		super.new(name, parent);
+	endfunction
+	
+	virtual function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+      mon_analysis_port = new("mon_analysis_port", this);
+      	if(!uvm_config_db#(virtual apb_slave_if)::get(this,"","apb_slave_vif",vif)) begin
+			`uvm_fatal("MONITOR","Couldn't get a handle to the virtual interface")
+		end
+	endfunction
+	
+	virtual task run_phase(uvm_phase phase);
+		super.run_phase(phase);
+		forever begin
+          @(posedge vif.clk);
+			if(vif.psel & vif.penable & vif.pready) begin
+				apb_slave_item item = new;
+				item.prdata = vif.prdata;
+				item.pwrite = vif.pwrite;
+				item.pwdata = vif.pwdata;
+				`uvm_info(get_type_name(), item.tx2string(), UVM_LOW);
+				mon_analysis_port.write(item);
+			end
+		end
+	endtask
+endclass

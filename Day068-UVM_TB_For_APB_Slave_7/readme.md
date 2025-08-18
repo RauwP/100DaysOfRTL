@@ -1,5 +1,3 @@
-Here is the raw Markdown source for the README file. You can copy the text directly from the code block below.
-
 # UVM TB for APB Slave 7
 
 ## 🎯 Objective
