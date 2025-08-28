@@ -116,7 +116,7 @@ This section is designed to be run on a local machine.
 | 058  	| UVM Driver Sequence Communications			| [Link](https://www.edaplayground.com/x/Q5d9)  |
 | 059  	| UVM Handling Multiple Transactions			| [Link](https://www.edaplayground.com/x/V8Qe)  |
 | 060  	| UVM Controling Test Duration					| [Link](https://www.edaplayground.com/x/E3D5)  |
-| 061  	| UVM TB for APB Master 1						| [Link](https://www.edaplayground.com/x/udxB)  |
+| 061  	| UVM TB for APB Slave 1						| [Link](https://www.edaplayground.com/x/udxB)  |
 | 062  	| UVM TB for APB Slave 2						| [Link](https://www.edaplayground.com/x/ZRZR)  |
 | 063  	| UVM TB for APB Slave 3						| [Link](https://www.edaplayground.com/x/r3zv)  |
 | 064  	| BRING THEM HOME NOW! 							| [Link](https://www.edaplayground.com/x/WcEw)  |
@@ -128,7 +128,7 @@ This section is designed to be run on a local machine.
 | 070  	| UVM TB for APB Slave 9						| [Link](https://www.edaplayground.com/x/ZazS)	|
 | 071  	| UVM TB for APB Slave 10						| [Link](https://www.edaplayground.com/x/rKEL)  |
 | 072  	| UVM TB for APB Slave 11						| [Link](https://www.edaplayground.com/x/ZmD5)  |
-| 074  	| 												| [Link]()            							|
+| 074  	| UVM TB for APB Master 1						| [Link]()            							|
 | 075  	| 												| [Link]()            							|
 | 076  	| 												| [Link]()            							|
 | 077  	| 												| [Link]()            							|
