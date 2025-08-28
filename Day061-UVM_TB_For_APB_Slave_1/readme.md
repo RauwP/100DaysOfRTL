@@ -1,8 +1,8 @@
-# UVM TB For APB Master 1
+# UVM TB For APB Slave 1
 
 ## 🎯 Objective
 
-To lay the initial groundwork for an APB Master UVM testbench by building the core `item` and `driver` classes and establishing the connection to the physical world via a `virtual interface`.
+To lay the initial groundwork for an APB Slave UVM testbench by building the core `item` and `driver` classes and establishing the connection to the physical world via a `virtual interface`.
 
 ---
 
