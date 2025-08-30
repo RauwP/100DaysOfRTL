@@ -128,7 +128,7 @@ This section is designed to be run on a local machine.
 | 070  	| UVM TB for APB Slave 9						| [Link](https://www.edaplayground.com/x/ZazS)	|
 | 071  	| UVM TB for APB Slave 10						| [Link](https://www.edaplayground.com/x/rKEL)  |
 | 072  	| UVM TB for APB Slave 11						| [Link](https://www.edaplayground.com/x/ZmD5)  |
-| 074  	| UVM TB for APB Master 1						| [Link]()            							|
+| 074  	| UVM TB for APB Master 1						| [Link](https://www.edaplayground.com/x/NVEh) 	|
 | 075  	| 												| [Link]()            							|
 | 076  	| 												| [Link]()            							|
 | 077  	| 												| [Link]()            							|
