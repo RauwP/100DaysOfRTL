@@ -1,4 +1,4 @@
-# UVM TB for APB Master 1
+# UVM TB for APB Master 2
 
 ## 🎯 Objective
 
