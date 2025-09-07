@@ -133,7 +133,7 @@ This section is designed to be run on a local machine.
 | 075  	| UVM TB for APB Master 3						| [Link](https://www.edaplayground.com/x/qf7Y)  |
 | 076  	| UVM TB for APB Master 4						| [Link](https://www.edaplayground.com/x/cw28)	|
 | 077  	| UVM TB for APB Master 5						| [Link](https://www.edaplayground.com/x/uySw)	|
-| 078  	| 												| [Link]()            							|
+| 078  	| Learning About RISC-V							| No Link            							|
 | 079  	| 												| [Link]()            							|
 | 080  	| 												| [Link]()            							|
 | 081  	| 												| [Link]()            							|
