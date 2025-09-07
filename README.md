@@ -132,7 +132,7 @@ This section is designed to be run on a local machine.
 | 074  	| UVM TB for APB Master 2						| [Link](https://www.edaplayground.com/x/9UmY) 	|
 | 075  	| UVM TB for APB Master 3						| [Link](https://www.edaplayground.com/x/qf7Y)  |
 | 076  	| UVM TB for APB Master 4						| [Link](https://www.edaplayground.com/x/cw28)	|
-| 077  	| 												| [Link]()            							|
+| 077  	| UVM TB for APB Master 5						| [Link](https://www.edaplayground.com/x/uySw)	|
 | 078  	| 												| [Link]()            							|
 | 079  	| 												| [Link]()            							|
 | 080  	| 												| [Link]()            							|
