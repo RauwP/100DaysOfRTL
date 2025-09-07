@@ -109,7 +109,7 @@ This section is designed to be run on a local machine.
 | 051  	| Formal Verification APB Master				| No Link       							    |
 | 052  	| Formal Verification APB Slave					| No Link       			     				|
 | 053  	| Formal Verification APB Slave w\ Data			| No Link		            					|
-| 054  	| TBA											| No Link            							|
+| 054  	| Bug Fixes										| No Link            							|
 | 055  	| Formal Verification FIFO						| No Link            							|
 | 056  	| UVM Hello, World!								| [Link](https://www.edaplayground.com/x/XBvu)  |
 | 057  	| UVM Analysis Ports							| [Link](https://www.edaplayground.com/x/pUs2) 	|
@@ -128,9 +128,10 @@ This section is designed to be run on a local machine.
 | 070  	| UVM TB for APB Slave 9						| [Link](https://www.edaplayground.com/x/ZazS)	|
 | 071  	| UVM TB for APB Slave 10						| [Link](https://www.edaplayground.com/x/rKEL)  |
 | 072  	| UVM TB for APB Slave 11						| [Link](https://www.edaplayground.com/x/ZmD5)  |
-| 074  	| UVM TB for APB Master 1						| [Link](https://www.edaplayground.com/x/NVEh) 	|
-| 075  	| UVM TB for APB Master 2						| [Link](https://www.edaplayground.com/x/9UmY)  |
-| 076  	| 												| [Link]()            							|
+| 073  	| UVM TB for APB Master 1						| [Link](https://www.edaplayground.com/x/NVEh)  |
+| 074  	| UVM TB for APB Master 2						| [Link](https://www.edaplayground.com/x/9UmY) 	|
+| 075  	| UVM TB for APB Master 3						| [Link](https://www.edaplayground.com/x/qf7Y)  |
+| 076  	| UVM TB for APB Master 4						| [Link](https://www.edaplayground.com/x/cw28)	|
 | 077  	| 												| [Link]()            							|
 | 078  	| 												| [Link]()            							|
 | 079  	| 												| [Link]()            							|
