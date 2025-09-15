@@ -135,7 +135,7 @@ This section is designed to be run on a local machine.
 | 077  	| UVM TB for APB Master 5						| [Link](https://www.edaplayground.com/x/uySw)	|
 | 078  	| Learning About RISC-V							| No Link            							|
 | 079  	| RISC-V Instruction Fetch						| [Link](https://www.edaplayground.com/x/M_SY)  |
-| 080  	| 												| [Link]()            							|
+| 080  	| RISC-V Instruction Decode						| [Link](https://www.edaplayground.com/x/MHkN) 	|
 | 081  	| 												| [Link]()            							|
 | 082  	| 												| [Link]()            							|
 | 083  	| 												| [Link]()            							|
