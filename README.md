@@ -136,7 +136,7 @@ This section is designed to be run on a local machine.
 | 078  	| Learning About RISC-V							| No Link            							|
 | 079  	| RISC-V Instruction Fetch						| [Link](https://www.edaplayground.com/x/M_SY)  |
 | 080  	| RISC-V Instruction Decode						| [Link](https://www.edaplayground.com/x/MHkN) 	|
-| 081  	| 												| [Link]()            							|
+| 081  	| RISC-V General Purpose Registers				| [Link](https://www.edaplayground.com/x/maYh) 	|
 | 082  	| 												| [Link]()            							|
 | 083  	| 												| [Link]()            							|
 | 084  	| 												| [Link]()            							|
