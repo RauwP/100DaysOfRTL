@@ -10,7 +10,7 @@ module riscv_if(
 	output		wire		pwrite_o,
 	output		wire[31:0]	pwdata_o,
 	input		wire		pready_i,
-  	input		wire[31:0]	prdata_i
+  	input		wire[31:0]	prdata_i,
 	
 	output		logic[31:0]	if_dec_instr_o,
 	input		wire[31:0]	ex_if_pc_i
