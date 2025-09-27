@@ -2,11 +2,11 @@
 
 
 
-### ## The Core Problem
+## The Core Problem
 
 The baseline design instantiated the classic blocks—`fetch`, `decode`, `regfile`, `execute`, and `dmem`—but lacked a **central control unit** to translate decoded instruction fields into coherent control signals across the datapath. In addition, ALU operation encodings were locally defined in `execute`, creating duplication and tight coupling. The upgrade introduces a **shared package of opcodes** and a **centralized control decoder** that consumes `funct3/funct7/opcode` plus type flags and emits control signals (PC select, operand mux selects, write-back select, memory write enable, and ALU op). `execute` now imports opcodes from the shared package, enabling consistent semantics across the design.
 
-### ## Your Task: The Upgrade Specification
+## Your Task: The Upgrade Specification
 
 * **Objective:** Integrate a **central RISC-V control unit** and a **shared SystemVerilog package** for ALU and instruction encodings, then refactor the top to wire these controls into the existing datapath—without changing observable external I/Os of the submodules.
 
@@ -44,14 +44,14 @@ The baseline design instantiated the classic blocks—`fetch`, `decode`, `regfil
       * *Purpose:* provide **single-source enumerations** for ALU ops (`alu_op_t`) and compact instruction-function identifiers used by control decode.
       * *Required Interface:* no ports (SystemVerilog `package`). Must be imported by both `control` and `execute`.
 
-### ## New Concepts Introduced
+## New Concepts Introduced
 
 * **SystemVerilog `package` / `import`:** A namespaced container for enums/types shared across modules. Use `import riscv_pkg::*;` to access `alu_op_t` and instruction IDs across files.
 * **Strongly-typed `enum logic` for opcodes:** Improves readability and synthesis safety compared to scattered `localparam`s.
 * **Control-word bundling:** Pack multiple control bits into a vector and assign them via concatenation to individual outputs—useful for concise decode tables.
 * **Type-flag “priority case” (`case (1’b1)`):** A common decode idiom that selects the active instruction class by testing boolean predicates in order.
 
-### ## Architectural Clues & Key Concepts
+## Architectural Clues & Key Concepts
 
 * **Separate control and datapath.** Keep `execute` purely functional (ALU) while letting `riscv_control` decide *which* operation to perform and *where* results go.
 * **Unify op encodings.** By migrating opcodes to `riscv_pkg`, you eliminate duplication and guarantee `control` and `execute` speak the same “op language.”
@@ -63,7 +63,7 @@ The baseline design instantiated the classic blocks—`fetch`, `decode`, `regfil
 * **PC steering.** `pc_sel_o` and `pc4_sel_o` hint at next-PC selection (sequential, branch target, jump target). Ensure `fetch`’s PC update uses these.
 * **Memory semantics.** `mem_wr_o` differentiates store vs. load; you still gate APB writes via `ex_dmem_wnr_i` and ensure handshakes with `dmem`.
 
-### ## Guiding Questions for Your Solution
+## Guiding Questions for Your Solution
 
 * Compare `riscv_execute.sv` before and after. What changes when ALU ops move from `localparam`s to a `package` enum? How does this reduce coupling and errors?
 * Inspect `riscv_control.sv`: why does it form `instr_funct_ctl = {funct7[5], funct3}`? Which R-type instructions depend on `funct7[5]` to distinguish ADD/SUB and SRL/SRA?
@@ -75,7 +75,7 @@ The baseline design instantiated the classic blocks—`fetch`, `decode`, `regfil
 * The `regfile` read assignments use a mask on the index. How would you ensure `x0` stays hard-wired to zero at both write and read paths?
 * What simple tests would you add to the testbench to validate: (a) ALU op mapping via the package, (b) write-back selection for JAL, and (c) store vs. load control?
 
-### ## File Overview
+## File Overview
 
 * **`design.sv` (top) — updated**
   Integrates the new control path. Wires decode outputs into `riscv_control` and fans control signals out to operand muxes, write-back mux, `fetch` PC steering, `dmem` write enable, and `regfile` write enable.
