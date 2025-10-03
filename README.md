@@ -140,7 +140,7 @@ This section is designed to be run on a local machine.
 | 082  	| RISC-V Execute								| [Link](https://www.edaplayground.com/x/NXfU)  |
 | 083  	| RISC-V Dmem interface							| [Link](https://www.edaplayground.com/x/ABBL)  |
 | 084  	| RISC-V Control Unit							| [Link](https://www.edaplayground.com/x/dmvr)  |
-| 085  	| 												| [Link]()            							|
+| 085  	| RISC-V I Type Support							| [Link](https://www.edaplayground.com/x/7NXW)  |
 | 086  	| 												| [Link]()            							|
 | 087  	| 												| [Link]()            							|
 | 088  	| 												| [Link]()            							|
