@@ -141,7 +141,7 @@ This section is designed to be run on a local machine.
 | 083  	| RISC-V Dmem interface							| [Link](https://www.edaplayground.com/x/ABBL)  |
 | 084  	| RISC-V Control Unit							| [Link](https://www.edaplayground.com/x/dmvr)  |
 | 085  	| RISC-V I Type Support							| [Link](https://www.edaplayground.com/x/7NXW)  |
-| 086  	| 												| [Link]()            							|
+| 086  	| RiSC-V RV32I Support							| [Link](https://www.edaplayground.com/x/a_rN)  |
 | 087  	| 												| [Link]()            							|
 | 088  	| 												| [Link]()            							|
 | 089  	| 												| [Link]()            							|

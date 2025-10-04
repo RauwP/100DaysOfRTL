@@ -1,0 +1,83 @@
+`ifndef RISCV_PKG
+`define RISCV_PKG
+package riscv_pkg;
+    //supported alu operations
+    typedef enum logic[3:0] {
+        OP_ADD = 4'h0,
+        OP_SUB = 4'h1,
+        OP_SLL = 4'h2,
+        OP_LSR = 4'h3,
+        OP_ASR = 4'h4,
+        OP_OR  = 4'h5,
+        OP_AND = 4'h6,
+        OP_XOR = 4'h7,
+        OP_EQL = 4'h8,
+        OP_ULT = 4'h9,
+        OP_UGT = 4'hA,
+        OP_SLT = 4'hB,
+        OP_SGT = 4'hC
+      } alu_op_t;
+
+    typedef enum logic[5:0] {
+        //R-type
+        ADD = 6'h0,
+        AND = 6'h7,
+        OR  = 6'h6,
+        SLL = 6'h1,
+        SLT = 6'h2,
+        SLTU = 6'h3,
+        SRA = 6'hD,
+        SRL = 6'h5,
+        SUB = 6'h8,
+        XOR = 6'h4
+    } r_type_instr_t;
+
+    typedef enum logic[5:0] {
+	//I-type
+    LB  	= 6'h0,
+    LBU 	= 6'h4,
+    LH  	= 6'h1,
+    LHU 	= 6'h5,
+    LW  	= 6'h2,
+    ADDI	= 6'h10,
+    ANDI	= 6'h1C,
+    ORI 	= 6'h16,
+    SLLI	= 6'h11,
+    SRLI	= 6'h15,
+    SLTI	= 6'h12,
+    SLTIU	= 6'h13,
+    //SRAI 	= 6'h15, TODO: Update enum to avoid duplicates
+  	XORI	= 6'h14,
+  	JALR	= 6'h7
+    } i_type_instr_t;
+	 
+	typedef enum logic[5:0] {
+	//S-type
+	SB = 6'h0,
+	SH = 6'h1,
+	SW = 6'h2
+	} s_type_instr_t;
+	
+	typedef enum logic[5:0] {
+	//B-type
+	BEQ = 6'h0,
+	BNE = 6'h1,
+	BLT = 6'h4,
+	BGE = 6'h5,
+	BLTU = 6'h6,
+	BGEU = 6'h7
+	} b_type_instr_t;
+	
+	typedef enum logic[5:0] {
+	//U-type
+	AUIPC = 6'h27,
+	LUI = 6'h37
+	} u_type_instr_t;
+	
+	typedef enum logic[5:0] {
+	//J-type
+	JAL = 6'h3
+	} j_type_instr_t;
+	
+endpackage
+`endif
